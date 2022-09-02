@@ -148,8 +148,8 @@ function select(x) {
                 url = atob("aHR0cHM6Ly9ub3cuZ2cvYXBwcy9raXRrYS1nYW1lcy83OTk5L3N0dW1ibGUtZ3V5cy5odG1s");
               }
               if (x.id === "btn_item_container_main_games_24") {
-                //roblox
-                url = atob("");
+                //krunker.io
+                url = atob("aHR0cHM6Ly9rcnVua2VyLmlvLw==");
               }
               if (x.id === "btn_item_container_main_games_25") {
                 //roblox
@@ -228,7 +228,7 @@ function select(x) {
                             f.src = url; //do not encode
                             
                           } else {
-                            alert("test")
+                            // alert("test")
                             f.src = __uv$config.prefix + __uv$config.encodeUrl(url);
                           }
                           s2_content = "" //resets s2_content
