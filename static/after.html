@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- created NOVEMBER 8th 2021 i think idk -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Retro Bowl</title> -->
+    <title>Game Stuff IDK</title>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="shrotcut icon" id="shortCutIcon" href="">
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="nav_bar_container">
+        <button id="logout_btn" class="nav_btn">logout</button>
+        <div class="nav_bar_user_online_container large">
+            <div class="nav_bar_user_online_inner_container">
+                Users Online:<span id="nav_bar_user_online_text" class="large">0</span>
+                
+            </div>
+        </div>
+            <div id="blank_screen_container">
+                <h1 class="small">Click this button. To restore click your <kbd>ENTER</kbd> key</h1>
+                <button id="gone_btn" onclick="gone()">Gone</button>
+            </div>
+                <div id="title_stealth_inner_container">
+            <h1 class="large">Stealth Mode</h1>
+            <div id="stealth_options_container_inner">
+                <div id="stealth_option_d"><img src="https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico"onclick="pgTitleD()" class="stealth_option_img"></div>
+                <div id="stealth_option_e"><img src="https://ssl.gstatic.com/classroom/favicon.png" onclick="pgTitleE()" class="stealth_option_img"></div>
+                <div id="stealth_option_c"><img src="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico" onclick="pgTitleC()" class="stealth_option_img"></div>
+                <div id="stealth_option_a"><img src="https://www.google.com/a/cpanel/k12.prosper-isd.net/images/favicon.ico" onclick="pgTitleA()" class="stealth_option_img"></div>
+                <div id="stealth_option_b"><img src="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png" onclick="pgTitleB()" class="stealth_option_img"></div>
+                <iframe src="hireme.html" id="hireme_iframe"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="main_content_container">
+    <div class="btn_container_main_apps">
+        <!-- <p>Apps</p> -->
+    <div class="btn_inner_container_main_apps">
+        <div onclick="select(this)" class="btn_item btn_item_container_main_apps" id="btn_item_container_main_apps_1" style="background: url('img/apps/spot.png') 0% 0% / cover;"></div>
+        <div onclick="select(this)" class="btn_item btn_item_container_main_apps" id="btn_item_container_main_apps_2" style="background: url('img/apps/rt.png') 0% 0% / cover;"></div>
+        <div onclick="select(this)" class="btn_item btn_item_container_main_apps" id="btn_item_container_main_apps_3" style="background: url('img/apps/cmg.png') 0% 0% / cover;"></div>
+        <div onclick="select(this)" class="btn_item btn_item_container_main_apps" id="btn_item_container_main_apps_4" style="background: url('img/apps/dd.jpg') 0% 0% / cover;"></div>
+        <div onclick="select(this)" class="btn_item btn_item_container_main_apps" id="btn_item_container_main_apps_5" style="background: url('img/apps/tich.jpg') 0% 0% / cover;"></div>
+        <div onclick="select(this)" class="btn_item btn_item_container_main_apps" id="btn_item_container_main_apps_6" style="background: url('img/apps/tt.jpg') 0% 0% / cover;"></div>
+        <div onclick="select(this)" class="btn_item btn_item_container_main_apps" id="btn_item_container_main_apps_7" style="background: url('img/apps/twt.png') 0% 0% / cover;"></div>
+        <div onclick="select(this)" class="btn_item btn_item_container_main_apps" id="btn_item_container_main_apps_8" style="background: url('img/apps/yt.png') 0% 0% / cover;"></div>
+        <div onclick="select(this)" class="btn_item btn_item_container_main_apps" id="btn_item_container_main_apps_9" style="background: url('img/apps/gfnow.png') 0% 0% / cover;"></div>
+        
+        
+    </div>
+</div>
+<div class="btn_container_main_games">
+    <div class="btn_inner_container_main_games">
+        <div onclick="select(this)" class="btn_item btn_item_container_main_games" id="btn_item_container_main_games_1" style="background: url('img/games/1v1-lol.jpg') 0% 0% / cover;"></div>
+            <div onclick="select(this)" class="btn_item btn_item_container_main_games" id="btn_item_container_main_games_2" style="background: url('img/games/among.jpg') 0% 0% / cover;"></div>
+            <div onclick="select(this)" class="btn_item btn_item_container_main_games" id="btn_item_container_main_games_3" style="background: url('img/games/mc.png') 0% 0% / cover;"></div>
+            <div onclick="select(this)" class="btn_item btn_item_container_main_games" id="btn_item_container_main_games_4" style="background: url('img/games/shellshockers.jpg') 0% 0% / cover;"></div>
+            <div onclick="select(this)" class="btn_item btn_item_container_main_games" id="btn_item_container_main_games_5" style="background: url('img/games/slope.jpg') 0% 0% / cover;"></div>
+            <div onclick="select(this)" class="btn_item btn_item_container_main_games" id="btn_item_container_main_games_6" style="background: url('img/games/d3c19e9b-9b7b-4a54-9cb5-6188a5bd7d3b.avif') 0% 0% / cover;"></div>
+            <div onclick="select(this)" class="btn_item btn_item_container_main_games" id="btn_item_container_main_games_7" style="background: url('img/games/channels4_profile.jpg') 50% 50% / cover;"></div>
+            <div onclick="select(this)" class="btn_item btn_item_container_main_games" id="btn_item_container_main_games_8" style="background: url('img/games/retro-bowl.jpg') 0% 0% / cover;"></div>
+            <div onclick="select(this)" class="btn_item btn_item_container_main_games" id="btn_item_container_main_games_9" style="background: url('img/games/cookie-clicker.png') 0% 0% / cover;"></div>
+            <div onclick="select(this)" class="btn_item btn_item_container_main_games" id="btn_item_container_main_games_10"style="background: url('img/games/slio.jpeg') 0% 0% / cover;"></div>
+            <div onclick="select(this)" class="btn_item btn_item_container_main_games" id="btn_item_container_main_games_11"style="background: url('img/games/ab67616d0000b27350707d85cead467401acd9b9.jpeg') 0% 0% / cover;"></div>
+            <div onclick="select(this)" class="btn_item btn_item_container_main_games" id="btn_item_container_main_games_12"style="background: url('img/games/parkour-block-3d.jpg') 50% 50% / cover;"></div>
+            <div onclick="select(this)" class="btn_item btn_item_container_main_games" id="btn_item_container_main_games_13"style="background: url('img/games/9caf740b6c004fa526f231a67e6664f0.jpg') 50% 50% / cover;"></div>
+            <div onclick="select(this)" class="btn_item btn_item_container_main_games" id="btn_item_container_main_games_14"style="background: url('img/games/bcacf81441bd4c7799a622171116ea9d-512x512.jpeg') 50% 50% / cover;"></div>
+            <div onclick="select(this)" class="btn_item btn_item_container_main_games" id="btn_item_container_main_games_15"style="background: url('img/games/paperio2.jpeg') 0% 0% / cover;"></div>
+            <div onclick="select(this)" class="btn_item btn_item_container_main_games" id="btn_item_container_main_games_16"style="background: url('img/games/googledoodlebaseball.jpeg') 50% 0% / cover;"></div>
+            <div onclick="select(this)" class="btn_item btn_item_container_main_games" id="btn_item_container_main_games_17"style="background: url('img/games/Google-Snake-Mods.png') 0% 0% / cover;"></div>
+            <div onclick="select(this)" class="btn_item btn_item_container_main_games" id="btn_item_container_main_games_18"style="background: url('img/games/superhot-buttonjpg-dcfc34.jpg') 0% 0% / cover;"></div>
+            <div onclick="select(this)" class="btn_item btn_item_container_main_games" id="btn_item_container_main_games_19"style="background: url('img/games/yohoho-io.jpg') 0% 0% / cover;"></div>
+            <div onclick="select(this)" class="btn_item btn_item_container_main_games" id="btn_item_container_main_games_20"style="background: url('img/games/fnf.jpg') 0% 0% / cover;"></div>
+            <div onclick="select(this)" class="btn_item btn_item_container_main_games" id="btn_item_container_main_games_21"style="background: url('img/games/95dedcf79332d22b86f455e84a99d90a_360.jpeg') 0% 0% / cover;"></div>
+            <div onclick="select(this)" class="btn_item btn_item_container_main_games" id="btn_item_container_main_games_22"style="background: url('img/games/001837a7ffe33549625812b803a08e21.jpg') 0% 0% / cover;"></div>
+            <div onclick="select(this)" class="btn_item btn_item_container_main_games" id="btn_item_container_main_games_23"style="background: url('img/games/1312214340_IGDB-272x380.jpg') 0% 0% / cover;"></div>
+
+<!-- background-size:cover;background-position:center; -->
+
+
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</div>
+
+<!-- 
+    <form>
+        <input placeholder="hi"> </form>
+    </form> -->
+    <script src="after.js"></script>
+    <script src="game.js"></script>
+    <script src="uv/uv.bundle.js"></script>
+    <script src="uv/uv.config.js"></script>
+    <!-- <script src="uv/uv.bundle.js"></script>
+        <script src="uv/uv.config.js"></script> -->
+        <!-- <script src="index.js"></script> -->
+    
+</body>
+
+</html>

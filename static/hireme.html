@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function iniFrame() {
+            if (window.self !== window.top) {
+                // !== the operator checks if the operands are
+                // have not the same value or not equal type
+                // document.write("The page is in iFrame");
+                document.getElementById('easter_egg').style.display = "none";
+            } else {
+                // document.write("The page is in iFrame");
+                document.getElementById('easter_egg').style.display = "none";
+            }
+        }
+        // iniFrame();
+    </script>
+</head>
+<body>
+    <h1 id="easter_egg">
+        If you find this you our lucky. Its and easter egg inspired by Titaniumnetwork.org.
+    </h1>
+</body>
+</html>

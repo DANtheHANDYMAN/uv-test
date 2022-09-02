@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Bowl</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shrotcut icon" id="shortCutIcon" href="">
+
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+
+
+    <!-- <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+        // import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js";
+        <!-susuusyt  --
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        
+        // Your web app's Firebase configuration
+        // const firebaseConfig = {
+            //     apiKey: "AIzaSyDiz9LAh_LlSeamO99zI_tzSK2qmZBiXcg",
+            //     authDomain: "retro-bowl.firebaseapp.com",
+            //     projectId: "retro-bowl",
+            //     storageBucket: "retro-bowl.appspot.com",
+            //     messagingSenderId: "328751517365",
+            //     appId: "1:328751517365:web:27d278acae1e8a9a72f8fc"
+            // };
+            
+            // // Initialize Firebase
+            // const app = initializeApp(firebaseConfig);
+            // var obj = JSON.parse(app);
+            // alert(app);
+            // alert(JSON.parse(app));
+        </script> -->
+    <!-- </head -->
+    <!-- </susuususus -->
+</head>
+
+<body>
+    <h1>Sign In With Google</h1>
+    <div id="signInContainer">
+        <div id="firebaseui-auth-container"></div>
+    </div>
+
+    <script src="uv/uv.bundle.js"></script>
+    <script src="uv/uv.config.js"></script>
+    <!-- <script src="index.js"></script> -->
+    <script src="firebase.js"></script>
+    <script>
+        var user = firebase.auth().currentUser;
+        console.log(user);
+    </script>
+
+</body>
+
+</html>

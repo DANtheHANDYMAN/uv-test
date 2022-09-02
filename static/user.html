@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="user.css">
+</head>
+<body>
+    <div class="user_main_container">
+        <div class="user_online_container">
+            <p class="large">Users Online:</p>
+            <p id="nav_bar_user_online_text" class="large">0</p>
+        </div>
+        <div class="user_name_list_online_container">
+            <p class="large">Users Online Name:</p>
+            <div class="user_name_list_online_inner_container"></div>
+        </div>
+        <div class="add_user_email_container">
+            <p class="large">Add User: </p>
+            <input type="text" placeholder="Email" class="add_user_email_input" autocomplete="off">
+            <button class="large" id="add_user_email_btn" style="cursor: pointer;">Add User</button>
+        </div>
+        <div class="del_user_email_container">
+            <p class="large">Delete User: </p>
+            <input type="text" placeholder="Email" class="del_user_email_input" autocomplete="off">
+            <button class="large" id="del_user_email_btn" style="cursor: pointer;">Delete User</button>
+        </div>
+        <div class="user_allowed_container">
+            <div class="user_allowed_inner_container">
+
+            </div>
+        </div>
+    </div>
+    <script src="user.js"></script>
+</body>
+</html>
