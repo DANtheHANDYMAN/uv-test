@@ -111,7 +111,7 @@ class UVServiceWorker extends EventEmitter {
             console.log(requestCtx.send);
             // const response = await fetch("/uv/test.json");
             console.log(response); //i think it has to do with me setting it in the firebase folder try "something url" + requestCtx.send
-
+// wow this took a while to fix :()
 
             if (response.status === 500) {
               console.log("response.status === 500");
