@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test_spinner</title>
+</head>
+<body>
+    <div id="load_container">
+        <img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif">
+        <progress id="load_progress" value="0" max="100"></progress>
+        <p id="load_message" class="large" style="color:#575e64;"></p>
+    </div>
+    <script>
+        document.oncontextmenu = rightClick; function rightClick(e) { e.preventDefault(); }
+          var progress_value = 0;
+            var progress
+            progress = setInterval(() => {
+                progress_value = progress_value + 2;
+                document.getElementById("load_progress").value = progress_value;
+                if (progress_value >= 100) {
+                    clearInterval(progress);
+                }
+            }, 100);
+            document.getElementById("load_message").innerHTML = "Loading scripts.";
+            setTimeout(() => { document.getElementById("load_message").innerHTML = "Waiting on scripts."; }, 1500);
+            setTimeout(() => { document.getElementById("load_message").innerHTML = "Scripts initialized"; }, 2000);
+            setTimeout(() => { document.getElementById("load_message").innerHTML = "Loading"; }, 5000);
+
+
+            setTimeout(() => {
+        
+                console.log("Done loading")
+                document.getElementById("load_container").style.display = "none";
+                document.getElementById("f").style.display = "flex";
+
+            }, 5000)
+     
+    </script>
+    <style>
+        #load_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+    </style>
+</body>
+</html>

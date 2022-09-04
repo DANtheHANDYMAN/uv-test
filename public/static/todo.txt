@@ -71,22 +71,10 @@ gitlab.io not blocked
 
 
 
-{
-  "hosting": {
-    "public": "",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  }
-}
 
 
 
-damp thicket
 
-beautiful-bessie
 
 
 

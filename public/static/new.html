@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect</title>
+</head>
+<body>
+    <style>
+        body,html{width:100%;height:100%;padding:0;margin:0;font-family: Arial, Helvetica, sans-serif;display:flex;
+        flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+        .btn {
+            background-color: brown;
+            width: 50%;
+            height: 50%;
+            text-align: center;
+            font-size: 550%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            width: 55%;
+            height: 55%;
+        }
+    </style>
+    <!-- <button onclick="go()">Go</button> -->
+    <div class="btn" onclick="go()">Click Me To Go</div>
+    <script>
+        document.oncontextmenu = rightClick;
+            function rightClick(e) {
+                e.preventDefault();
+            }
+            // setTimeout(go,1000)
+        function go() {
+            var t = window.open("about:blank");
+            // var t = window.open();
+
+            t.document.write(
+                "<html><head> <title>Sample</title></head><body>"
+            );
+            var f = t.document.createElement("iframe");
+            var s = t.document.createElement("script");
+            var st = t.document.createElement("style");
+            s.textContent =
+                "document.oncontextmenu = rightClick;function rightClick(e) {e.preventDefault();}";
+
+
+            f.setAttribute("id", "f");
+            st.textContent =
+            "body,html{width:100%;height:100%;padding:0;margin:0; overflow:hidden;}iframe{width:100%;height:95vh;border:none;}";
+            t.document.write("</body></html>");
+            t.document.body.append(f);
+            t.document.body.append(s);
+            t.document.body.append(st);
+            f.src = "after.html";
+            location = "https://google.com";
+        }
+    </script>
+
+    <script
+        type="text/javascript">  function preventBack() { window.history.forward(); } setTimeout("preventBack()", 0); window.onunload = function () { null };</script>
+</body>
+</html>

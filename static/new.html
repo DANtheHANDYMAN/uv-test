@@ -36,37 +36,53 @@
         }
     </style>
     <!-- <button onclick="go()">Go</button> -->
-    <div class="btn" onclick="go()">Click Me To Go</div>
+    <!-- <div class="btn" onclick="go()">Click Me To Go</div> -->
+    <div class="btn" onclick="">Click Me To Go</div>
+
     <script>
-        document.oncontextmenu = rightClick;
-            function rightClick(e) {
-                e.preventDefault();
-            }
-            // setTimeout(go,1000)
-        function go() {
-            var t = window.open("about:blank");
-            // var t = window.open();
 
-            t.document.write(
-                "<html><head> <title>Sample</title></head><body>"
-            );
-            var f = t.document.createElement("iframe");
-            var s = t.document.createElement("script");
-            var st = t.document.createElement("style");
-            s.textContent =
-                "document.oncontextmenu = rightClick;function rightClick(e) {e.preventDefault();}";
+              document.oncontextmenu = rightClick;
+                function rightClick(e) {
+                    e.preventDefault();
+                }
+
+                // if (window.location !== window.parent.location) {
+                //         // The page is in an iframe
+                //     } else {
+                //         // The page is not in an iframe
+                //     }
 
 
-            f.setAttribute("id", "f");
-            st.textContent =
-            "body,html{width:100%;height:100%;padding:0;margin:0; overflow:hidden;}iframe{width:100%;height:95vh;border:none;}";
-            t.document.write("</body></html>");
-            t.document.body.append(f);
-            t.document.body.append(s);
-            t.document.body.append(st);
-            f.src = "after.html";
-            location = "https://google.com";
-        }
+
+        // document.oncontextmenu = rightClick;
+        //     function rightClick(e) {
+        //         e.preventDefault();
+        //     }
+        //     // setTimeout(go,1000)
+        // function go() {
+        //     var t = window.open("about:blank");
+        //     // var t = window.open();
+
+        //     t.document.write(
+        //         "<html><head> <title>Sample</title></head><body>"
+        //     );
+        //     var f = t.document.createElement("iframe");
+        //     var s = t.document.createElement("script");
+        //     var st = t.document.createElement("style");
+        //     s.textContent =
+        //         "document.oncontextmenu = rightClick;function rightClick(e) {e.preventDefault();}";
+
+
+        //     f.setAttribute("id", "f");
+        //     st.textContent =
+        //     "body,html{width:100%;height:100%;padding:0;margin:0; overflow:hidden;}iframe{width:100%;height:95vh;border:none;}";
+        //     t.document.write("</body></html>");
+        //     t.document.body.append(f);
+        //     t.document.body.append(s);
+        //     t.document.body.append(st);
+        //     f.src = "after.html";
+        //     location = "https://google.com";
+        // }
     </script>
 
     <script

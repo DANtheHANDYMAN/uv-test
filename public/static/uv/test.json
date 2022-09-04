@@ -1,0 +1,11 @@
+{
+	"versions": [
+		"v1"
+	],
+	"language": "NodeJS",
+	"memoryUsage": 20.22,
+	"developer": {
+		"name": "TOMPHTTP NodeJS Bare Server",
+		"repository": "https://github.com/tomphttp/bare-server-node"
+	}
+}
