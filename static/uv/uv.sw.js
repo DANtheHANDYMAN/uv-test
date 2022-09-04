@@ -106,10 +106,10 @@ class UVServiceWorker extends EventEmitter {
 
             if (reqEvent.intercepted) return reqEvent.returnValue;
 
-            // const response = await fetch(requestCtx.send);
+            const response = await fetch(requestCtx.send);
             // const response = await fetch("https://incog.dev/bare/");
             console.log(requestCtx.send);
-            const response = await fetch("/uv/test.json");
+            // const response = await fetch("/uv/test.json");
             console.log(response); //i think it has to do with me setting it in the firebase folder try "something url" + requestCtx.send
 
 
