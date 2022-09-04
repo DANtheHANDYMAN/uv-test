@@ -13,8 +13,8 @@
 
   // FirebaseUI config.
   var uiConfig = {
-    // signInSuccessUrl: "after.html",
-    signInSuccessUrl: "new.html",
+    signInSuccessUrl: "after.html",
+    // signInSuccessUrl: "new.html", 9/4/22
 
     signInOptions: [
       // Leave the lines as is for the providers you want to offer your users.
@@ -27,8 +27,8 @@
     ],
     // Terms of service url.
 
-    // tosUrl: "after.html",
-    tosUrl: "new.html",
+    tosUrl: "after.html",
+    // tosUrl: "new.html", 9/4/22
   };
   
   var ui = new firebaseui.auth.AuthUI(firebase.auth());
@@ -78,15 +78,15 @@
           firebase.auth().currentUser.email.includes("@k12.prosper-isd.net") ===
           true
         ) {
-          // location = "/after.html";
-          location = "new.html";
+          location = "after.html";
+          // location = "new.html"; 9/4/22
 
         } else if (
           firebase.auth().currentUser.email.includes("dda") === true
         ) {
           // location = "admin"
-          // location = "/after.html";
-          location = "new.html";
+          location = "after.html";
+          // location = "new.html"; 9/4/22
 
         } else {
           alert("your not a student!!!!!!!!!!");
