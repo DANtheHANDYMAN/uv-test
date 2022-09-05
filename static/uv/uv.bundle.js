@@ -35757,65 +35757,80 @@ function injectHead(ctx) {
     });
 };
 
-function createInjection(handler = '/uv.handler.js', bundle = '/uv.bundle.js', config = '/uv.config.js', cookies = '', referrer = '') {
+function createInjection(inject_test = '/inject.js', handler = '/uv.handler.js', bundle = '/uv.bundle.js', config = '/uv.config.js', cookies = '', referrer = '') {
     return [
-        {
-            tagName: 'script',
-            nodeName: 'script',
-            childNodes: [
-                {
-                    nodeName: '#text',
-                    value: `alert("hi");window.__uv$cookies = atob("${btoa(cookies)}");\nwindow.__uv$referrer = atob("${btoa(referrer)}");`
-                },
-            ],
-            attrs: [
-                {
-                    name: '__uv-script',
-                    value: '1',
-                    skip: true,
-                }
-            ],
+      {
+        tagName: "script",
+        nodeName: "script",
+        childNodes: [
+          {
+            nodeName: "#text",
+            value: `window.__uv$cookies = atob("${btoa(
+              cookies
+            )}");\nwindow.__uv$referrer = atob("${btoa(referrer)}");`,
+          },
+        ],
+        attrs: [
+          {
+            name: "__uv-script",
+            value: "1",
             skip: true,
-        },
-        {
-            tagName: 'script',
-            nodeName: 'script',
-            childNodes: [],
-            attrs: [
-                { name: 'src', value: bundle, skip: true },
-                {
-                    name: '__uv-script',
-                    value: '1',
-                    skip: true,
-                }
-            ],
-        },
-        {
-            tagName: 'script',
-            nodeName: 'script',
-            childNodes: [],
-            attrs: [
-                { name: 'src', value: config, skip: true },
-                {
-                    name: '__uv-script',
-                    value: '1',
-                    skip: true,
-                }
-            ],
-        },
-        {
-            tagName: 'script',
-            nodeName: 'script',
-            childNodes: [],
-            attrs: [
-                { name: 'src', value: handler, skip: true },
-                {
-                    name: '__uv-script',
-                    value: '1',
-                    skip: true,
-                }
-            ],
-        }
+          },
+        ],
+        skip: true,
+      },
+      {
+        tagName: "script",
+        nodeName: "script",
+        childNodes: [],
+        attrs: [
+          { name: "src", value: bundle, skip: true },
+          {
+            name: "__uv-script",
+            value: "1",
+            skip: true,
+          },
+        ],
+      },
+      {
+        tagName: "script",
+        nodeName: "script",
+        childNodes: [],
+        attrs: [
+          { name: "src", value: inject_test, skip: true },
+          {
+            name: "__uv-script",
+            value: "1",
+            skip: true,
+          },
+        ],
+      },
+      {
+        tagName: "script",
+        nodeName: "script",
+        childNodes: [],
+        attrs: [
+          { name: "src", value: config, skip: true },
+          {
+            name: "__uv-script",
+            value: "1",
+            skip: true,
+          },
+        ],
+      },
+      {
+        tagName: "script",
+        nodeName: "script",
+        childNodes: [],
+        attrs: [
+          { name: "src", value: handler, skip: true },
+          {
+            name: "__uv-script",
+            value: "1",
+            skip: true,
+          },
+        ],
+      },
     ];
 };
 
