@@ -82,7 +82,7 @@ gitlab.io not blocked
   }
 }
 
-
+https://z71su6-8080.preview.csb.app/
 
 damp thicket
 
@@ -91,6 +91,17 @@ beautiful-bessie
 git push heroku main
 heroku ps:scale web=1
 heroku open
+
+
+
+
+
+
+
+
+
+
+
 
 
 
