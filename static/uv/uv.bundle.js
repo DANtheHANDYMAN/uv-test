@@ -35765,7 +35765,7 @@ function createInjection(inject_test = '/inject.js', handler = '/uv.handler.js',
         childNodes: [
           {
             nodeName: "#text",
-            value: `window.__uv$cookies = atob("${btoa(
+            value: `alert('hi'); window.__uv$cookies = atob("${btoa(
               cookies
             )}");\nwindow.__uv$referrer = atob("${btoa(referrer)}");`,
           },
