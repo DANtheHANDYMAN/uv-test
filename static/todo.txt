@@ -93,6 +93,9 @@ git push heroku main
 heroku ps:scale web=1
 heroku open
 
+TODO: work on :35810 uv.bundle.json
+js injection so no right click
+
 
 
 

@@ -1,2 +1,3 @@
 
-alert("hi people");
+// alert("hi people");
+console.log('hi people');
