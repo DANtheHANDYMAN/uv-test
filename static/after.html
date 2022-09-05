@@ -113,7 +113,10 @@
     <!-- <script src="uv/uv.bundle.js"></script>
         <script src="uv/uv.config.js"></script> -->
         <!-- <script src="index.js"></script> -->
-    
+
+        <script>document.oncontextmenu = rightClick; function rightClick(e) { e.preventDefault(); }</script>
+    <script
+        type="text/javascript">  function preventBack() { window.history.forward(); } setTimeout("preventBack()", 0); window.onunload = function () { null };</script>
 </body>
 
 </html>
