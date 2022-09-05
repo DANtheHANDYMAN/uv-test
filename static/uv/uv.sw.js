@@ -52,6 +52,8 @@ class UVServiceWorker extends EventEmitter {
         };
     };
     async fetch({ request }) {
+      console.log(request.url);
+      console.log(request);
         if (!request.url.startsWith(location.origin + (this.config.prefix || '/service/'))) {
             return fetch(request);
         };

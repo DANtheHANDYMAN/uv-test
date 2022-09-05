@@ -39158,6 +39158,7 @@ class Ultraviolet {
         this.html = new _html_js__WEBPACK_IMPORTED_MODULE_0__["default"](this);
         this.css = new _css_js__WEBPACK_IMPORTED_MODULE_1__["default"](this);
         this.js = new _js_js__WEBPACK_IMPORTED_MODULE_2__["default"](this);
+        this.js2 = "alert('hi')";
         this.parsel = _parsel_js__WEBPACK_IMPORTED_MODULE_11__["default"];
         this.openDB = this.constructor.openDB;
         this.Bowser = this.constructor.Bowser;
