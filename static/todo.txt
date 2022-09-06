@@ -91,6 +91,7 @@ damp thicket
 
 beautiful-bessie
 ancient-sunset
+lucid-turing
 
 git push heroku main
 heroku ps:scale web=1
@@ -101,6 +102,7 @@ js injection so no right click
 
 TODO: make it so if /bare/v1 fetch fails it will try it again
 
+!!!!!!!!// TODO: cant right sign in with google on index.html if in an iframe so fix that!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 plan
 1. Get jm blocked
