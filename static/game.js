@@ -51,6 +51,10 @@ function select(x) {
                 //gfnow
                 url = atob("aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29t");
               }
+              if (x.id === "btn_item_container_main_apps_10") {
+                //insta
+                url = atob("aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS8=");
+              }
 
               if (x.id === "btn_item_container_main_games_1") {
                 //1v1-lol

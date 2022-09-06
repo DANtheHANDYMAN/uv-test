@@ -52,151 +52,211 @@ class UVServiceWorker extends EventEmitter {
         };
     };
     async fetch({ request }) {
-      console.log(request.url);
-      console.log(request);
+      // console.log(request.url);
+      // console.log(request);
         if (!request.url.startsWith(location.origin + (this.config.prefix || '/service/'))) {
             return fetch(request);
         };
         try {
+          const ultraviolet = new Ultraviolet(this.config);
 
-            const ultraviolet = new Ultraviolet(this.config);
+          if (typeof this.config.construct === "function") {
+            this.config.construct(ultraviolet, "service");
+          }
 
-            if (typeof this.config.construct === 'function') {
-                this.config.construct(ultraviolet, 'service');
-            };
+          const db = await ultraviolet.cookie.db();
 
-            const db = await ultraviolet.cookie.db();
+          ultraviolet.meta.origin = location.origin;
+          ultraviolet.meta.base = ultraviolet.meta.url = new URL(
+            ultraviolet.sourceUrl(request.url)
+          );
 
-            ultraviolet.meta.origin = location.origin;
-            ultraviolet.meta.base = ultraviolet.meta.url = new URL(ultraviolet.sourceUrl(request.url));
+          const requestCtx = new RequestContext(
+            request,
+            this,
+            ultraviolet,
+            !this.method.empty.includes(request.method.toUpperCase())
+              ? await request.blob()
+              : null
+          );
 
-            const requestCtx = new RequestContext(
-                request, 
-                this, 
-                ultraviolet, 
-                !this.method.empty.includes(request.method.toUpperCase()) ? await request.blob() : null
+          if (ultraviolet.meta.url.protocol === "blob:") {
+            requestCtx.blob = true;
+            requestCtx.base = requestCtx.url = new URL(requestCtx.url.pathname);
+          }
+
+          if (
+            request.referrer &&
+            request.referrer.startsWith(location.origin)
+          ) {
+            const referer = new URL(ultraviolet.sourceUrl(request.referrer));
+
+            if (
+              requestCtx.headers.origin ||
+              (ultraviolet.meta.url.origin !== referer.origin &&
+                request.mode === "cors")
+            ) {
+              requestCtx.headers.origin = referer.origin;
+            }
+
+            requestCtx.headers.referer = referer.href;
+          }
+
+          const cookies = (await ultraviolet.cookie.getCookies(db)) || [];
+          const cookieStr = ultraviolet.cookie.serialize(
+            cookies,
+            ultraviolet.meta,
+            false
+          );
+
+          if (
+            this.browser === "Firefox" &&
+            !(
+              request.destination === "iframe" ||
+              request.destination === "document"
+            )
+          ) {
+            requestCtx.forward.shift();
+          }
+
+          if (cookieStr) requestCtx.headers.cookie = cookieStr;
+          requestCtx.headers.Host = requestCtx.url.host;
+
+          const reqEvent = new HookEvent(requestCtx, null, null);
+          this.emit("request", reqEvent);
+
+          if (reqEvent.intercepted) return reqEvent.returnValue;
+
+          const response = await fetch(requestCtx.send);
+
+          // const response = await fetch(requestCtx.send)
+          //   .then((response) => {
+          //     console.log(response);
+          //     // console.log(response.status);
+
+          //     // if (response.status !== 200) {
+          //     //   console.log("there is an error");
+          //     // }
+          //     //hiiiiii
+          //   })
+          //   .catch((err) => {
+          //     console.log("error retrieving data", err);
+          //   });
+          //todo: keep working on this so it wont give errors and if it doesnt work redo the fetch again try to
+          //  if (!response.ok) {
+          //    const message = `An error has occured: ${response.status}`;
+          //    throw new Error(message);
+          //    //  https://dmitripavlutin.com/javascript-fetch-async-await/#3-handling-fetch-errors
+          //  }
+
+          // const response = await fetch("https://incog.dev/bare/");
+          // console.log(requestCtx.send);
+          // const response = await fetch("/uv/test.json");
+          // console.log(response); //i think it has to do with me setting it in the firebase folder try "something url" + requestCtx.send
+          // wow this took a while to fix :()
+
+          //todo: this should be here but its not so idk if its good or not
+          //! TypeError: Cannot read properties of undefined (reading 'status')
+          if (response.status === 500) {
+            console.log("response.status === 500");
+              return Promise.reject('');
+          };
+            //! This was original here but it gives errors so yea
+
+
+          const responseCtx = new ResponseContext(requestCtx, response, this);
+          const resEvent = new HookEvent(responseCtx, null, null);
+
+          this.emit("beforemod", resEvent);
+          if (resEvent.intercepted) return resEvent.returnValue;
+
+          for (const name of this.headers.csp) {
+            if (responseCtx.headers[name]) delete responseCtx.headers[name];
+          }
+
+          if (responseCtx.headers.location) {
+            responseCtx.headers.location = ultraviolet.rewriteUrl(
+              responseCtx.headers.location
             );
+          }
 
-            if (ultraviolet.meta.url.protocol === 'blob:') {
-                requestCtx.blob = true;
-                requestCtx.base = requestCtx.url = new URL(requestCtx.url.pathname);
-            };
-
-            if (request.referrer && request.referrer.startsWith(location.origin)) {
-                const referer = new URL(ultraviolet.sourceUrl(request.referrer));
-
-                if (requestCtx.headers.origin || ultraviolet.meta.url.origin !== referer.origin && request.mode === 'cors') {
-                    requestCtx.headers.origin = referer.origin;
-                };
-
-                requestCtx.headers.referer = referer.href;
-            };
-
-            const cookies = await ultraviolet.cookie.getCookies(db) || [];
-            const cookieStr = ultraviolet.cookie.serialize(cookies, ultraviolet.meta, false);
-
-            if (this.browser === 'Firefox' && !(request.destination === 'iframe' || request.destination === 'document')) {
-                requestCtx.forward.shift();
-            };
-
-            if (cookieStr) requestCtx.headers.cookie = cookieStr;
-            requestCtx.headers.Host = requestCtx.url.host;
-
-
-            const reqEvent = new HookEvent(requestCtx, null, null);
-            this.emit('request', reqEvent);
-
-            if (reqEvent.intercepted) return reqEvent.returnValue;
-
-            const response = await fetch(requestCtx.send);
-            // const response = await fetch("https://incog.dev/bare/");
-            console.log(requestCtx.send);
-            // const response = await fetch("/uv/test.json");
-            console.log(response); //i think it has to do with me setting it in the firebase folder try "something url" + requestCtx.send
-// wow this took a while to fix :()
-
-            if (response.status === 500) {
-              console.log("response.status === 500");
-                return Promise.reject('');
-            };
-
-            const responseCtx = new ResponseContext(requestCtx, response, this);
-            const resEvent = new HookEvent(responseCtx, null, null);
-
-            this.emit('beforemod', resEvent);
-            if (resEvent.intercepted) return resEvent.returnValue;
-
-            for (const name of this.headers.csp) {
-                if (responseCtx.headers[name]) delete responseCtx.headers[name];
-            }; 
-            
-            if (responseCtx.headers.location) {
-                responseCtx.headers.location = ultraviolet.rewriteUrl(responseCtx.headers.location);
-            };
-
-            if (responseCtx.headers['set-cookie']) {
-                Promise.resolve(ultraviolet.cookie.setCookies(responseCtx.headers['set-cookie'], db, ultraviolet.meta)).then(() => {
-                    self.clients.matchAll().then(function (clients){
-                        clients.forEach(function(client){
-                            client.postMessage({
-                                msg: 'updateCookies',
-                                url: ultraviolet.meta.url.href,
-                            });
-                        });
-                    });
+          if (responseCtx.headers["set-cookie"]) {
+            Promise.resolve(
+              ultraviolet.cookie.setCookies(
+                responseCtx.headers["set-cookie"],
+                db,
+                ultraviolet.meta
+              )
+            ).then(() => {
+              self.clients.matchAll().then(function (clients) {
+                clients.forEach(function (client) {
+                  client.postMessage({
+                    msg: "updateCookies",
+                    url: ultraviolet.meta.url.href,
+                  });
                 });
-                delete responseCtx.headers['set-cookie'];
-            };
-
-            if (responseCtx.body) {
-                switch(request.destination) {
-                    case 'script':
-                    case 'worker':
-                        responseCtx.body = `if (!self.__uv && self.importScripts) importScripts('${__uv$config.bundle}', '${__uv$config.config}', '${__uv$config.handler}');\n`;
-                        responseCtx.body += ultraviolet.js.rewrite(
-                            await response.text()
-                        );
-                        break;
-                    case 'style':
-                        responseCtx.body = ultraviolet.rewriteCSS(
-                            await response.text()
-                        ); 
-                        break;
-                case 'iframe':
-                case 'document':
-                        if (isHtml(ultraviolet.meta.url, (responseCtx.headers['content-type'] || ''))) {
-                            responseCtx.body = ultraviolet.rewriteHtml(
-                                await response.text(), 
-                                { 
-                                    document: true ,
-                                    injectHead: ultraviolet.createHtmlInject(
-                                        this.config.handler, 
-                                        this.config.bundle, 
-                                        this.config.config,
-                                        ultraviolet.cookie.serialize(cookies, ultraviolet.meta, true), 
-                                        request.referrer
-                                    )
-                                }
-                            );      
-                        };
-                };
-            };
-
-            if (requestCtx.headers.accept === 'text/event-stream') {
-                responseCtx.headers['content-type'] = 'text/event-stream';
-            };
-
-            this.emit('response', resEvent);
-            if (resEvent.intercepted) return resEvent.returnValue;
-
-            return new Response(responseCtx.body, {
-                headers: responseCtx.headers,
-                status: responseCtx.status,
-                statusText: responseCtx.statusText,
+              });
             });
+            delete responseCtx.headers["set-cookie"];
+          }
 
+          if (responseCtx.body) {
+            switch (request.destination) {
+              case "script":
+              case "worker":
+                responseCtx.body = `if (!self.__uv && self.importScripts) importScripts('${__uv$config.bundle}', '${__uv$config.config}', '${__uv$config.handler}');\n`;
+                responseCtx.body += ultraviolet.js.rewrite(
+                  await response.text()
+                );
+                break;
+              case "style":
+                responseCtx.body = ultraviolet.rewriteCSS(
+                  await response.text()
+                );
+                break;
+              case "iframe":
+              case "document":
+                if (
+                  isHtml(
+                    ultraviolet.meta.url,
+                    responseCtx.headers["content-type"] || ""
+                  )
+                ) {
+                  responseCtx.body = ultraviolet.rewriteHtml(
+                    await response.text(),
+                    {
+                      document: true,
+                      injectHead: ultraviolet.createHtmlInject(
+                        this.config.handler,
+                        this.config.bundle,
+                        this.config.config,
+                        ultraviolet.cookie.serialize(
+                          cookies,
+                          ultraviolet.meta,
+                          true
+                        ),
+                        request.referrer
+                      ),
+                    }
+                  );
+                }
+            }
+          }
+
+          if (requestCtx.headers.accept === "text/event-stream") {
+            responseCtx.headers["content-type"] = "text/event-stream";
+          }
+
+          this.emit("response", resEvent);
+          if (resEvent.intercepted) return resEvent.returnValue;
+
+          return new Response(responseCtx.body, {
+            headers: responseCtx.headers,
+            status: responseCtx.status,
+            statusText: responseCtx.statusText,
+          });
         } catch(err) {
-          console.log("error thing")
+          console.log("error thing"); //this goes of
             return new Response(err.toString(), {
                 status: 500,
             });

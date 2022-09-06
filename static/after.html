@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- created NOVEMBER 8th 2021 i think idk -->
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <title>Retro Bowl</title> -->
-    <title>Game Stuff IDK</title>
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-    <link rel="stylesheet" href="index.css">
-    <link rel="shrotcut icon" id="shortCutIcon" href="">
-    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- created NOVEMBER 8th 2021 i think idk -->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <title>Retro Bowl</title> -->
+        <title>Game Stuff IDK</title>
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+        <link rel="stylesheet" href="index.css">
+        <link rel="shrotcut icon" id="shortCutIcon" href="">
+        <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+        <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <!-- <script src="error.js"></script> -->
 </head>
 
 <body>
     <div class="nav_bar_container">
+        <p id="site_version_date">9.5.22.B</p>
         <button id="logout_btn" class="nav_btn">logout</button>
         <div class="nav_bar_user_online_container large">
             <div class="nav_bar_user_online_inner_container">
@@ -58,6 +60,7 @@
         <div onclick="select(this)" class="btn_item btn_item_container_main_apps" id="btn_item_container_main_apps_7" style="background: url('img/apps/twt.png') 0% 0% / cover;"></div>
         <div onclick="select(this)" class="btn_item btn_item_container_main_apps" id="btn_item_container_main_apps_8" style="background: url('img/apps/yt.png') 0% 0% / cover;"></div>
         <div onclick="select(this)" class="btn_item btn_item_container_main_apps" id="btn_item_container_main_apps_9" style="background: url('img/apps/gfnow.png') 0% 0% / cover;"></div>
+        <div onclick="select(this)" class="btn_item btn_item_container_main_apps" id="btn_item_container_main_apps_10" style="background: url('img/apps/Instagram_logo_2022.svg.png') 0% 0% / cover;"></div>
         
         
     </div>
@@ -99,7 +102,32 @@
 <br>
 <br>
 <br>
+<p>If you encounter an error that says: <span>RangeError: Failed to construct 'Response': The status provided (0) is outside the range [200, 599].</span></p>
+<p>Then Please open and close the tab back again.</p>
+<br>
+<p>If you encounter any other error please tell us.</p>
 
+<p>Error:<span id="error_output"></span></p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 </div>
 
 <!-- 
@@ -108,11 +136,18 @@
     </form> -->
     <script src="after.js"></script>
     <script src="game.js"></script>
+        <script src="error.js"></script>
+
     <script src="uv/uv.bundle.js"></script>
     <script src="uv/uv.config.js"></script>
     <!-- <script src="uv/uv.bundle.js"></script>
         <script src="uv/uv.config.js"></script> -->
         <!-- <script src="index.js"></script> -->
+        <script>
+            // const hi = "";
+            // const hi = "";
+            // intentional error
+            </script>
 
         <script>document.oncontextmenu = rightClick; function rightClick(e) { e.preventDefault(); }</script>
     <script

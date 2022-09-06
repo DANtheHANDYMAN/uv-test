@@ -195,101 +195,193 @@ document.querySelector(".user_name_list_online_inner_container").scrollTop = doc
   });
 }
 
-//  setTimeout(check_a, 2000);
-//  var a = false;
-//  function check_a() {
-// db.ref("users/").on("value", (snapshot) => {
-//     const arr = snapshot.val();
-//     console.log(arr);
-//     if (arr) {
-//       var x;
-//       for (x in arr) {
-//         var item = arr[x];
-// console.log(JSON.stringify(item));
-// if(item.email === document.querySelector(".add_user_email_input").value) {
-//   console.log(item.allowed.allowed);
-//   console.log(item);
-  
-//   if (item.allowed.allowed === true) {
-//     a = true;
-//             }
-//           }
-//         }
-//       }
-//     })
-//   }
+
+//TODO: have to do this error thing finish this
+setTimeout(count_users_error, 5000); // because scripts don't load
+setInterval(count_users_error, 60000); // 1 mins
+var users_error = 0;
+function count_users_error() {
+  db.ref("error/").on("value", (snapshot) => {
+    const arr = snapshot.val();
+    console.log(arr);
+    document.querySelector(".user_error_list_online_inner_container").innerHTML = "";
+    if (arr) {
+      var x;
+      for (x in arr) {
+        var item = arr[x];
+
+        let minutes = 1000 * 60;
+        let date2 = new Date();
+
+        // if (item.time <= Math.round(date2.getTime() / minutes) - 10) {
+        //   //TODO: change it to 1
+        //   console.log("they are offline !!!!");
+
+        //   users_online = 0;
+        //   document.querySelector("#nav_bar_user_online_text").innerHTML =
+        //     users_online;
+        //   document.querySelector(
+        //     ".user_name_list_online_inner_container"
+        //   ).innerHTML = "";
+        // } else {
+          // users_online = 0;
+          // users_online = users_online + 1;
+          // document.querySelector("#nav_bar_user_online_text").innerHTML =
+          //   users_online;
+          // console.log(item.user);
+          // console.log(item.time);
+          // console.log(Math.round(date2.getTime() / minutes));
+
+
+          //  email: firebase.auth().currentUser.email,
+          // error: error,
+          // date: all_the_time,
+          // site_version: document.getElementById("site_version_date").textContent
+
+
+          var user_error_list_name_container = document.createElement("div");
+          user_error_list_name_container.setAttribute(
+            "class",
+            "user_error_list_name_container large"
+          );
+
+          var user_error_list_content = document.createElement("div");
+          user_error_list_content.setAttribute(
+            "class",
+            "user_error_list_content"
+          );
+          user_error_list_content.textContent = item.error + " ⁘ ";
+
+          var user_error_list_time = document.createElement("div");
+          user_error_list_time.setAttribute("class", "user_error_list_time");
+          user_error_list_time.innerHTML = item.date + " ⁘ " + item.site_version + " ⁘ ";
+
+          var user_error_list_email = document.createElement("div");
+          user_error_list_email.setAttribute("class", "user_error_list_email");
+          user_error_list_email.innerHTML = item.email + " ⁘ ";
+
+          // user_name_list_time.textContent = item.time + " - " + Math.round(date2.getTime() / minutes) - item.time;
+
+          user_error_list_name_container.append(
+            user_error_list_content,
+            user_error_list_time,
+            user_error_list_email
+          );
+
+          document
+            .querySelector(".user_error_list_online_inner_container")
+            .append(user_error_list_name_container);
+
+          document.querySelector(
+            ".user_error_list_online_inner_container"
+          ).scrollTop = document.querySelector(
+            ".user_error_list_online_inner_container"
+          ).scrollHeight;
+        // }
+      }
+    }
+  });
+}
 
 
 
-  document.getElementById("add_user_email_btn").onclick = () => {add_user_allowed(); get_user_allowed();};
-  document.getElementById("del_user_email_btn").onclick = del_user_allowed;
+document.getElementById("add_user_email_btn").onclick = () => {add_user_allowed(); get_user_allowed();};
+document.getElementById("del_user_email_btn").onclick = del_user_allowed;
 
-  var user_allowed_array = "";
-  get_user_allowed();
-  function get_user_allowed() {
+var user_allowed_array = "";
+get_user_allowed();
+function get_user_allowed() {
     db.ref("users_allowed/").on("value", (snapshot) => {
 
-
+      
     user_allowed_array = "";
-
+    
       var arr = snapshot.val(); //const
       if(arr) {
-      console.log(arr);
+        console.log(arr);
       console.log(arr.allowed);
-
+      
       user_allowed_array = user_allowed_array.concat(arr.allowed);
       console.log(user_allowed_array);
-
+      
       // if (arr) {
-      //   var x;
-      //   for (x in arr) {
-      //     var item = arr[x];
-      //     console.log(item);
-      //     // console.log(item.allowed);
-  
-      //     // user_allowed_array.push(arr)
-      //     // user_allowed_array = user_allowed_array.concat(item);
-      //     // console.log(user_allowed_array);
-  
-  
-      //   }
-      //   }
-      } else {
-        arr = "";
-      }
-    });
-  }
-  function add_user_allowed() {
-  
-    db.ref("users_allowed").set({
+        //   var x;
+        //   for (x in arr) {
+          //     var item = arr[x];
+          //     console.log(item);
+          //     // console.log(item.allowed);
+          
+          //     // user_allowed_array.push(arr)
+          //     // user_allowed_array = user_allowed_array.concat(item);
+          //     // console.log(user_allowed_array);
+          
+          
+          //   }
+          //   }
+        } else {
+          arr = "";
+        }
+      });
+    }
+    function add_user_allowed() {
+      
+      db.ref("users_allowed").set({
+        
+        allowed: user_allowed_array + " " + document.querySelector(".add_user_email_input").value,
+      }) .then(function () {
+        console.log("succseesss");
+        document.querySelector(".add_user_email_input").value = "";
+        // setTimeout(() => {user_allowed_array = ""}, 500);
+      });
+    }
+
     
-      allowed: user_allowed_array + " " + document.querySelector(".add_user_email_input").value,
-    }) .then(function () {
-      console.log("succseesss");
-      document.querySelector(".add_user_email_input").value = "";
-      // setTimeout(() => {user_allowed_array = ""}, 500);
-    });
-  }
-
-
-
-
-
-
-  function del_user_allowed() {
-
-     var new_user_allowed_array = user_allowed_array.replace(document.querySelector(".del_user_email_input").value, '');
-     console.log(new_user_allowed_array)
-    db.ref("users_allowed").set({
-     
+    
+    
+    
+    
+    function del_user_allowed() {
+      
+      var new_user_allowed_array = user_allowed_array.replace(document.querySelector(".del_user_email_input").value, '');
+      console.log(new_user_allowed_array)
+      db.ref("users_allowed").set({
+        
       allowed: new_user_allowed_array,
     }) .then(function () {
         console.log("succseesss");
         document.querySelector(".del_user_email_input").value = "";
         // setTimeout(() => {user_allowed_array = ""; new_user_allowed_array = "";}, 500);
       });
-  }
+    }
   // TODO: do this now https://firebase.google.com/docs/database/web/read-and-write#updating_or_deleting_data
+  
+  //  setTimeout(check_a, 2000);
+  //  var a = false;
+  //  function check_a() {
+  // db.ref("users/").on("value", (snapshot) => {
+  //     const arr = snapshot.val();
+  //     console.log(arr);
+  //     if (arr) {
+  //       var x;
+  //       for (x in arr) {
+  //         var item = arr[x];
+  // console.log(JSON.stringify(item));
+  // if(item.email === document.querySelector(".add_user_email_input").value) {
+  //   console.log(item.allowed.allowed);
+  //   console.log(item);
+    
+  //   if (item.allowed.allowed === true) {
+  //     a = true;
+  //             }
+  //           }
+  //         }
+  //       }
+  //     })
+  //   }
+
+
+
+
   // var b = false;
   // function check_b() {
   //   db.ref("users/").on("value", (snapshot) => {

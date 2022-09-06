@@ -62,6 +62,8 @@ games on jenxy math
 //super hot
 //stumble guys
 
+!maybe vex games!
+
 
 not blocked everyrthing works  might be slow deploying time though https://yrumsp-8080.preview.csb.app/
 github.io blocked
@@ -84,10 +86,11 @@ gitlab.io not blocked
 
 https://z71su6-8080.preview.csb.app/
 https://3pscyk-8080.preview.csb.app/
-
+https://cf8ykh-5000.preview.csb.app/
 damp thicket
 
 beautiful-bessie
+ancient-sunset
 
 git push heroku main
 heroku ps:scale web=1
@@ -96,9 +99,12 @@ heroku open
 TODO: work on :35810 uv.bundle.json
 js injection so no right click
 
+TODO: make it so if /bare/v1 fetch fails it will try it again
 
 
-
+plan
+1. Get jm blocked
+2. Rule
 
 
 

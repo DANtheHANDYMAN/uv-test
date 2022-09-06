@@ -81,7 +81,17 @@ var db = firebase.database();
 
 
 
+  
 console.log("after.js is working")
+
+//  const response = fetch("/bare/v1")
+//    .then((response) => {
+//      console.log("after.js testing" + response);
+//    })
+//    .catch((err) => {
+//      console.log("error retrieving data", err);
+//    });
+
 
 var ran_num = Math.floor(Math.random() * 10);
 
@@ -153,104 +163,6 @@ function count_users_online() {
 }
 
 
-//  var a_check = false;
-//  function check_a() {
-// db.ref("users/").on("value", (snapshot) => {
-//     const arr = snapshot.val();
-//     console.log(arr);
-//     if (arr) {
-//       var x;
-//       for (x in arr) {
-//         var item = arr[x];
-// console.log(JSON.stringify(item));
-//         if(item.email === firebase.auth().currentUser.email) {
-//           console.log(item.allowed.allowed);
-//           console.log(item);
-
-//             if (item.allowed.allowed === true) {
-//               a_check = true;
-//             }
-//         }
-//       }
-//     }
-//     })
-//  }
-
-
-//* all of these used for making the create_new_user
-//   var b_check = false;
-//   function check_b() {
-//     db.ref("users/").on("value", (snapshot) => {
-//       const arr = snapshot.val();
-//       console.log(arr);
-//       if (arr) {
-//         var x;
-//         for (x in arr) {
-//           var item = arr[x];
-//           console.log(JSON.stringify(item));
-//           if (item.email === firebase.auth().currentUser.email) {
-//             // console.log(item.allowed.allowed);
-//             // console.log(item);
-
-//             if (item.admin === true) {
-//               b_check = true;
-//             }
-//           }
-//         }
-//       }
-//     });
-//   }
-
-// setTimeout(create_new_user, 5000);
-// function create_new_user() {
-//   if(localStorage.getItem('user_set') === 'true') {
-//     console.log('already made an account');
-//   } else {
-//       // let minutes = 1000 * 60;
-//       // let date2 = new Date();
-//         db.ref("users/" + `user_${firebase.auth().currentUser.uid}`)
-//           //  db.ref("users_online/" + `user_${ran_num}`)
-
-//           .set({
-//             // time: Math.round(date2.getTime() / minutes),
-//             user: firebase.auth().currentUser.displayName,
-//             email: firebase.auth().currentUser.email,
-//             uid: firebase.auth().currentUser.uid,
-//             admin: b_check,
-//             allowed: {
-//               allowed: a_check
-//             },
-//           })
-
-//           .then(function () {
-//             console.log("succseesss");
-//             localStorage.setItem("user_set", true);
-//           });
-//       }
-// }
-
-// var a = false;
-// function check_perms() {
-//      db.ref("users/").on("value", (snapshot) => {
-//        const arr = snapshot.val();
-//        console.log(arr);
-//        if (arr) {
-//          var x;
-//          for (x in arr) {
-//            var item = arr[x];
-//            console.log(JSON.stringify(item));
-//            if (item.email === firebase.auth().currentUser.email) {
-//              if (item.allowed.allowed === true) {
-//                a = true;
-//              } else {
-//               alert("Sorry Your Account Is Not Allowed. Have You Paid?")
-//               location = "https://google.com";
-//              }
-//            }
-//          }
-//        }
-//      });
-// }
 
 function check_perms() {
   db.ref("users_allowed/").on("value", (snapshot) => {
@@ -274,35 +186,35 @@ function pgTitleA() {
   document.title = "Inbox (4) - Gmail";
   var shortcuticon = document.getElementById("shortCutIcon");
   shortcuticon.href =
-    "https://www.google.com/a/cpanel/k12.prosper-isd.net/images/favicon.ico";
+  "https://www.google.com/a/cpanel/k12.prosper-isd.net/images/favicon.ico";
   // alert('Title and Favicon are now changed');
 }
 function pgTitleB() {
   document.title = "My Drive - Google Drive";
   var shortcuticon = document.getElementById("shortCutIcon");
   shortcuticon.href =
-    "https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png";
+  "https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png";
   // alert('Title and Favicon are now changed');
 }
 function pgTitleC() {
   document.title = "Google Slides";
   var shortcuticon = document.getElementById("shortCutIcon");
   shortcuticon.href =
-    "https://ssl.gstatic.com/docs/presentations/images/favicon5.ico";
+  "https://ssl.gstatic.com/docs/presentations/images/favicon5.ico";
   // alert('Title and Favicon are now changed');
 }
 function pgTitleD() {
   var shortcuticon = document.getElementById("shortCutIcon");
   document.title = "Google Docs";
   shortcuticon.href =
-    "https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico";
+  "https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico";
   // alert('Title and Favicon are now changed');
 }
 function pgTitleE() {
   document.title = "Classes";
   var shortcuticon = document.getElementById("shortCutIcon");
   document.getElementById("shortCutIcon").href =
-    "https://ssl.gstatic.com/classroom/favicon.png";
+  "https://ssl.gstatic.com/classroom/favicon.png";
   // alert('Title and Favicon are now changed');
 }
 
@@ -313,13 +225,114 @@ document.addEventListener("keydown", function (event) {
   if (event.code === "Enter" && isgone === true) {
     // alert('Enter is pressed!');
     // if(isgone === true) {
-    document.body.style.display = "block";
-    // }
-  }
-});
-
-    function gone() {
-      // alert('still working on this');
-      document.body.style.display = "none";
-      isgone = true;
+      document.body.style.display = "block";
+      // }
     }
+  });
+  
+  function gone() {
+    // alert('still working on this');
+    document.body.style.display = "none";
+    isgone = true;
+  }
+
+
+
+  //  var a_check = false;
+  //  function check_a() {
+  // db.ref("users/").on("value", (snapshot) => {
+  //     const arr = snapshot.val();
+  //     console.log(arr);
+  //     if (arr) {
+  //       var x;
+  //       for (x in arr) {
+  //         var item = arr[x];
+  // console.log(JSON.stringify(item));
+  //         if(item.email === firebase.auth().currentUser.email) {
+  //           console.log(item.allowed.allowed);
+  //           console.log(item);
+  
+  //             if (item.allowed.allowed === true) {
+  //               a_check = true;
+  //             }
+  //         }
+  //       }
+  //     }
+  //     })
+  //  }
+  
+  
+  //* all of these used for making the create_new_user
+  //   var b_check = false;
+  //   function check_b() {
+  //     db.ref("users/").on("value", (snapshot) => {
+  //       const arr = snapshot.val();
+  //       console.log(arr);
+  //       if (arr) {
+  //         var x;
+  //         for (x in arr) {
+  //           var item = arr[x];
+  //           console.log(JSON.stringify(item));
+  //           if (item.email === firebase.auth().currentUser.email) {
+  //             // console.log(item.allowed.allowed);
+  //             // console.log(item);
+  
+  //             if (item.admin === true) {
+  //               b_check = true;
+  //             }
+  //           }
+  //         }
+  //       }
+  //     });
+  //   }
+  
+  // setTimeout(create_new_user, 5000);
+  // function create_new_user() {
+  //   if(localStorage.getItem('user_set') === 'true') {
+  //     console.log('already made an account');
+  //   } else {
+  //       // let minutes = 1000 * 60;
+  //       // let date2 = new Date();
+  //         db.ref("users/" + `user_${firebase.auth().currentUser.uid}`)
+  //           //  db.ref("users_online/" + `user_${ran_num}`)
+  
+  //           .set({
+  //             // time: Math.round(date2.getTime() / minutes),
+  //             user: firebase.auth().currentUser.displayName,
+  //             email: firebase.auth().currentUser.email,
+  //             uid: firebase.auth().currentUser.uid,
+  //             admin: b_check,
+  //             allowed: {
+  //               allowed: a_check
+  //             },
+  //           })
+  
+  //           .then(function () {
+  //             console.log("succseesss");
+  //             localStorage.setItem("user_set", true);
+  //           });
+  //       }
+  // }
+  
+  // var a = false;
+  // function check_perms() {
+  //      db.ref("users/").on("value", (snapshot) => {
+  //        const arr = snapshot.val();
+  //        console.log(arr);
+  //        if (arr) {
+  //          var x;
+  //          for (x in arr) {
+  //            var item = arr[x];
+  //            console.log(JSON.stringify(item));
+  //            if (item.email === firebase.auth().currentUser.email) {
+  //              if (item.allowed.allowed === true) {
+  //                a = true;
+  //              } else {
+  //               alert("Sorry Your Account Is Not Allowed. Have You Paid?")
+  //               location = "https://google.com";
+  //              }
+  //            }
+  //          }
+  //        }
+  //      });
+  // }
