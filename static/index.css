@@ -197,6 +197,14 @@ h1,h2,h3,p {
                     cursor: pointer;
                     border-radius: 10px;
                 }
+                
+                #fullscreen_btn {
+                    background-color: lightsalmon;
+                    border: none;
+                    font-size: 150%;
+                    cursor: pointer;
+                    border-radius: 10px;
+                }
 
 
 

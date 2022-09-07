@@ -87,7 +87,8 @@ function select(x) {
         if (x.id === "btn_item_container_main_games_7") {
           //roblox
           url = atob(
-            "aHR0cHM6Ly9ub3cuZ2cvYXBwcy9yb2Jsb3gtY29ycG9yYXRpb24vNTM0OS9yb2Jsb3guaHRtbA=="
+            // "aHR0cHM6Ly9ub3cuZ2cvYXBwcy9yb2Jsb3gtY29ycG9yYXRpb24vNTM0OS9yb2Jsb3guaHRtbA=="
+            "aHR0cHM6Ly9ub3cuZ2cvcGxheS9yb2Jsb3gtY29ycG9yYXRpb24vNTM0OS9yb2Jsb3g="
           );
         }
         if (x.id === "btn_item_container_main_games_8") {
@@ -196,8 +197,10 @@ function select(x) {
         }
         var t = window.open("about:blank");
         t.document.write(
-          '<html><head>  <script>function reload() {document.getElementById("f").src=document.getElementById("f").src}</script><link rel="shrotcut icon" id="shortCutIcon" href="">  <title>Sample</title>      <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"></head><body>'
+          '<html><head>  <script>function fullscreen() {if (document.getElementById("f").requestFullscreen) {document.getElementById("f").requestFullscreen();}} function reload() {document.getElementById("f").src=document.getElementById("f").src}</script><link rel="shrotcut icon" id="shortCutIcon" href="https://ssl.gstatic.com/classroom/favicon.png">  <title>Classes</title>      <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"></head><body>'
         );
+// function fullscreen() {if (document.getElementById("f").requestFullscreen) {document.getElementById("f").requestFullscreen();}}
+
         var f = t.document.createElement("iframe");
         //  var l = t.document.createElement("h1");
         //  var s = t.document.createElement("script");
@@ -212,10 +215,11 @@ function select(x) {
         var nbscript = t.document.createElement("script");
 
         nb.innerHTML +=
-          '       <div class="reload_btn_container"><button class="nav_btn" id="reload_btn" onclick="reload()">RELOAD (click me if games don\'t work)</button></div>               <div id="title_stealth_inner_container"><h1 class="large">Stealth Mode</h1><div id="stealth_options_container_inner"><div id="stealth_option_d"><img src="https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico"onclick="pgTitleD()" class="stealth_option_img"></div><div id="stealth_option_e"><img src="https://ssl.gstatic.com/classroom/favicon.png" onclick="pgTitleE()" class="stealth_option_img"></div><div id="stealth_option_c"><img src="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico" onclick="pgTitleC()" class="stealth_option_img"></div><div id="stealth_option_a"><img src="https://www.google.com/a/cpanel/k12.prosper-isd.net/images/favicon.ico" onclick="pgTitleA()" class="stealth_option_img"></div><div id="stealth_option_b"><img src="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png" onclick="pgTitleB()" class="stealth_option_img"></div><iframe src="hireme.html" id="hireme_iframe"></iframe></div></div>';
+          '                    <div class="fullscreen_btn_container"><button class="nav_btn" id="fullscreen_btn" onclick="fullscreen()">Full-Screen</button></div><div class="reload_btn_container"><button class="nav_btn" id="reload_btn" onclick="reload()">RELOAD (click me if games don\'t work)</button></div>               <div id="title_stealth_inner_container"><h1 class="large">Stealth Mode</h1><div id="stealth_options_container_inner"><div id="stealth_option_d"><img src="https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico"onclick="pgTitleD()" class="stealth_option_img"></div><div id="stealth_option_e"><img src="https://ssl.gstatic.com/classroom/favicon.png" onclick="pgTitleE()" class="stealth_option_img"></div><div id="stealth_option_c"><img src="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico" onclick="pgTitleC()" class="stealth_option_img"></div><div id="stealth_option_a"><img src="https://www.google.com/a/cpanel/k12.prosper-isd.net/images/favicon.ico" onclick="pgTitleA()" class="stealth_option_img"></div><div id="stealth_option_b"><img src="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png" onclick="pgTitleB()" class="stealth_option_img"></div><iframe src="hireme.html" id="hireme_iframe"></iframe></div></div>';
         nbscript.textContent =
-          'var shortcuticon = document.getElementById("shortCutIcon");function pgTitleA() {document.title = "Inbox (4) - Gmail";var shortcuticon = document.getElementById("shortCutIcon");shortcuticon.href ="https://www.google.com/a/cpanel/k12.prosper-isd.net/images/favicon.ico";}function pgTitleB() {document.title = "My Drive - Google Drive";var shortcuticon = document.getElementById("shortCutIcon");shortcuticon.href ="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png";}function pgTitleC() {document.title = "Google Slides";var shortcuticon = document.getElementById("shortCutIcon");shortcuticon.href ="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico";}function pgTitleD() {var shortcuticon = document.getElementById("shortCutIcon");document.title = "Google Docs";shortcuticon.href ="https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico";}function pgTitleE() {document.title = "Classes";var shortcuticon = document.getElementById("shortCutIcon");document.getElementById("shortCutIcon").href ="https://ssl.gstatic.com/classroom/favicon.png";}';
-
+          'function fullscreen() {if (document.getElementById("f").requestFullscreen) {document.getElementById("f").requestFullscreen();}} var shortcuticon = document.getElementById("shortCutIcon");function pgTitleA() {document.title = "Inbox (4) - Gmail";var shortcuticon = document.getElementById("shortCutIcon");shortcuticon.href ="https://www.google.com/a/cpanel/k12.prosper-isd.net/images/favicon.ico";}function pgTitleB() {document.title = "My Drive - Google Drive";var shortcuticon = document.getElementById("shortCutIcon");shortcuticon.href ="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png";}function pgTitleC() {document.title = "Google Slides";var shortcuticon = document.getElementById("shortCutIcon");shortcuticon.href ="https://ssl.gstatic.com/docs/presentations/images/favicon5.ico";}function pgTitleD() {var shortcuticon = document.getElementById("shortCutIcon");document.title = "Google Docs";shortcuticon.href ="https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico";}function pgTitleE() {document.title = "Classes";var shortcuticon = document.getElementById("shortCutIcon");document.getElementById("shortCutIcon").href ="https://ssl.gstatic.com/classroom/favicon.png";}';
+//TODO: finish fullscreen button 
+//! do it!!!!!!
         lf.setAttribute("id", "load_container");
         lf.innerHTML =
           ' <div id="load_container"><img src="https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif"><progress id="load_progress" value="0" max="100"></progress><p id="load_message" class="large" style="color:#575e64;"></p></div>';
@@ -244,8 +248,8 @@ function select(x) {
         //  l.textContent = "Loading...";
         //  l.setAttribute("id", "l");
         //  f.setAttribute("onload", "no()");
-        st.textContent = //change height: 100% to height: 95vw to help with nav bar
-          "h1,h2,h3,p {margin: 0;}.large {font-size: 150%;}body,html{width:100%;height:95vw;padding:0;margin:0; overflow:hidden;}iframe{width:100%;height:95vh;display:none;border:none;}#nav_bar_container{width: 100%;height: 5vw;background-color: grey;display: flex;justify-content: center;align-items: center;align-content: center;flex-wrap: nowrap;flex-direction: row;grid-gap: 25px;}#stealth_options_container_inner {display: flex;flex-direction: row;flex-wrap: nowrap;align-content: center;align-items: center;justify-content: center;grid-gap: 5px;}.stealth_option_img {cursor: pointer;width: 24px;height: 24px;}#hireme_iframe {width: 1px;height: 1px;resize: both;} ";
+        st.textContent = //change height: 100% to height: 95vw to help with nav bar     then 92.5 then 91 did some test on slope trust then just 85
+          "h1,h2,h3,p {margin: 0;}.large {font-size: 150%;}body,html{width:100%;height:100%;padding:0;margin:0; overflow:hidden;}iframe{width:100%;height:85vh;display:none;border:none;}#nav_bar_container{width: 100%;height: 5vw;background-color: grey;display: flex;justify-content: center;align-items: center;align-content: center;flex-wrap: nowrap;flex-direction: row;grid-gap: 25px;}#stealth_options_container_inner {display: flex;flex-direction: row;flex-wrap: nowrap;align-content: center;align-items: center;justify-content: center;grid-gap: 5px;}.stealth_option_img {cursor: pointer;width: 24px;height: 24px;}#hireme_iframe {width: 1px;height: 1px;resize: both;} ";
         t.document.write("</body></html>");
         t.document.body.append(nb);
         t.document.body.append(f);
