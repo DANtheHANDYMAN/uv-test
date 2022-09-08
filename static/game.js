@@ -86,10 +86,12 @@ function select(x) {
         }
         if (x.id === "btn_item_container_main_games_7") {
           //roblox
-          url = atob(
+          // url = atob(
             // "aHR0cHM6Ly9ub3cuZ2cvYXBwcy9yb2Jsb3gtY29ycG9yYXRpb24vNTM0OS9yb2Jsb3guaHRtbA=="
-            "aHR0cHM6Ly9ub3cuZ2cvcGxheS9yb2Jsb3gtY29ycG9yYXRpb24vNTM0OS9yb2Jsb3g="
-          );
+            // "aHR0cHM6Ly9ub3cuZ2cvcGxheS9yb2Jsb3gtY29ycG9yYXRpb24vNTM0OS9yb2Jsb3g="
+
+            // "aHR0cHM6Ly9tYXRoc3Nwb3QuY29tLw=="
+          // );
         }
         if (x.id === "btn_item_container_main_games_8") {
           //retro-bowl this one is impossible to do >;( so sad
@@ -171,7 +173,8 @@ function select(x) {
         if (x.id === "btn_item_container_main_games_23") {
           //stumbleguys
           url = atob(
-            "aHR0cHM6Ly9ub3cuZ2cvYXBwcy9raXRrYS1nYW1lcy83OTk5L3N0dW1ibGUtZ3V5cy5odG1s"
+            // "aHR0cHM6Ly9ub3cuZ2cvYXBwcy9raXRrYS1nYW1lcy83OTk5L3N0dW1ibGUtZ3V5cy5odG1s"
+            "aHR0cHM6Ly9ub3cuZ2cvcGxheS9raXRrYS1nYW1lcy83OTk5L3N0dW1ibGUtZ3V5cw=="
           );
         }
         if (x.id === "btn_item_container_main_games_24") {
@@ -179,8 +182,10 @@ function select(x) {
           url = atob("aHR0cHM6Ly9rcnVua2VyLmlvLw==");
         }
         if (x.id === "btn_item_container_main_games_25") {
-          //roblox
-          url = atob("");
+          //geodash
+          url = atob(
+            "aHR0cHM6Ly9ub3cuZ2cvcGxheS9yb2J0b3AtZ2FtZXMvMzQ2NS9nZW9tZXRyeS1kYXNoLWxpdGU="
+          );
         }
         if (x.id === "btn_item_container_main_games_26") {
           //roblox
@@ -275,6 +280,10 @@ function select(x) {
         } else if (x.id === "btn_item_container_main_games_16") {
           //gdb
           url = "https://google.com/logos/2019/july4th19/r3/july4th19.html";
+          f.src = url; //do not encode
+        } else if (x.id === "btn_item_container_main_games_7") {
+          //gd
+          url = "https://mathsspot.com/";
           f.src = url; //do not encode
         } else {
           // alert("test")
