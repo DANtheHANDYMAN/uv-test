@@ -266,10 +266,12 @@ class UVServiceWorker extends EventEmitter {
         statusText: responseCtx.statusText,
       });
     } catch (err) {
+      console.log(err)
       console.log("error thing"); //this goes of
-      return new Response(err.toString(), {
-        status: 500,
-      });
+// const response = await fetch(requestCtx.send);
+      // return new Response(err.toString(), {
+      //   status: 500,
+      // });
     }
   }
   getBarerResponse(response) {

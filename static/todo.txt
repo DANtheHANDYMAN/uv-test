@@ -95,6 +95,7 @@ lucid-turing
 exciting-glitter
 withered-morning
 dawn-leftpad
+competent-mendel
 
 git push heroku main
 heroku ps:scale web=1
