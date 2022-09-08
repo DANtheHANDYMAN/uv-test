@@ -110,6 +110,7 @@ TODO: make it so if /bare/v1 fetch fails it will try it again
 
 Bill said he was secretly reveling in his new-found fame
 
+tik tok and twitter /bare/v1 problem might be hosting on codesandbox try on heroku and it works
 
 plan
 1. Get jm blocked

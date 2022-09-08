@@ -86,12 +86,12 @@ function select(x) {
         }
         if (x.id === "btn_item_container_main_games_7") {
           //roblox
-          // url = atob(
+          url = atob(
             // "aHR0cHM6Ly9ub3cuZ2cvYXBwcy9yb2Jsb3gtY29ycG9yYXRpb24vNTM0OS9yb2Jsb3guaHRtbA=="
-            // "aHR0cHM6Ly9ub3cuZ2cvcGxheS9yb2Jsb3gtY29ycG9yYXRpb24vNTM0OS9yb2Jsb3g="
+            "aHR0cHM6Ly9ub3cuZ2cvcGxheS9yb2Jsb3gtY29ycG9yYXRpb24vNTM0OS9yb2Jsb3g="
 
             // "aHR0cHM6Ly9tYXRoc3Nwb3QuY29tLw=="
-          // );
+          );
         }
         if (x.id === "btn_item_container_main_games_8") {
           //retro-bowl this one is impossible to do >;( so sad
@@ -113,7 +113,8 @@ function select(x) {
         if (x.id === "btn_item_container_main_games_12") {
           //mcparkour
           url = atob(
-            "aHR0cHM6Ly9odG1sNS5nYW1lZGlzdHJpYnV0aW9uLmNvbS9ydnZBU01pTS8xNDYxZDQwYmI3N2Y0OGU2YmU3MjQ4OTk1OWExYWMwNC8/Z2Rfem9uZV9jb25maWc9ZXlKd1lYSmxiblJWVWt3aU9pSm9kSFJ3Y3pvdkwzZDNkeTVpWlhOMFkzSmhlbmxuWVcxbGN5NWpiMjB2SWl3aWNHRnlaVzUwUkc5dFlXbHVJam9pWW1WemRHTnlZWHA1WjJGdFpYTXVZMjl0SWl3aWRHOXdSRzl0WVdsdUlqb2lZbVZ6ZEdOeVlYcDVaMkZ0WlhNdVkyOXRJaXdpYUdGelNXMXdjbVZ6YzJsdmJpSTZabUZzYzJVc0lteHZZV1JsY2tWdVlXSnNaV1FpT25SeWRXVXNJbWh2YzNRaU9pSm9kRzFzTlM1bllXMWxaR2x6ZEhKcFluVjBhVzl1TG1OdmJTSXNJblpsY25OcGIyNGlPaUl4TGpVdU1UUWlmUSUyNTNEJTI1M0Q="
+            // "aHR0cHM6Ly9odG1sNS5nYW1lZGlzdHJpYnV0aW9uLmNvbS9ydnZBU01pTS8xNDYxZDQwYmI3N2Y0OGU2YmU3MjQ4OTk1OWExYWMwNC8/Z2Rfem9uZV9jb25maWc9ZXlKd1lYSmxiblJWVWt3aU9pSm9kSFJ3Y3pvdkwzZDNkeTVpWlhOMFkzSmhlbmxuWVcxbGN5NWpiMjB2SWl3aWNHRnlaVzUwUkc5dFlXbHVJam9pWW1WemRHTnlZWHA1WjJGdFpYTXVZMjl0SWl3aWRHOXdSRzl0WVdsdUlqb2lZbVZ6ZEdOeVlYcDVaMkZ0WlhNdVkyOXRJaXdpYUdGelNXMXdjbVZ6YzJsdmJpSTZabUZzYzJVc0lteHZZV1JsY2tWdVlXSnNaV1FpT25SeWRXVXNJbWh2YzNRaU9pSm9kRzFzTlM1bllXMWxaR2x6ZEhKcFluVjBhVzl1TG1OdmJTSXNJblpsY25OcGIyNGlPaUl4TGpVdU1UUWlmUSUyNTNEJTI1M0Q="
+            "aHR0cHM6Ly9odG1sNS5nYW1lZGlzdHJpYnV0aW9uLmNvbS9ydnZBU01pTS8xNDYxZDQwYmI3N2Y0OGU2YmU3MjQ4OTk1OWExYWMwNC9pbmRleC5odG1sP2dkX3pvbmVfY29uZmlnPWV5SndZWEpsYm5SVlVrd2lPaUpvZEhSd2N6b3ZMM2QzZHk1bmIyZDVMbU52YlM4aUxDSndZWEpsYm5SRWIyMWhhVzRpT2lKbmIyZDVMbU52YlNJc0luUnZjRVJ2YldGcGJpSTZJbWR2WjNrdVkyOXRJaXdpYUdGelNXMXdjbVZ6YzJsdmJpSTZabUZzYzJVc0lteHZZV1JsY2tWdVlXSnNaV1FpT25SeWRXVXNJbWh2YzNRaU9pSm9kRzFzTlM1bllXMWxaR2x6ZEhKcFluVjBhVzl1TG1OdmJTSXNJblpsY25OcGIyNGlPaUl4TGpVdU1UTWlmUSUyNTNEJTI1M0Q="
           );
         }
         if (x.id === "btn_item_container_main_games_13") {
@@ -281,11 +282,13 @@ function select(x) {
           //gdb
           url = "https://google.com/logos/2019/july4th19/r3/july4th19.html";
           f.src = url; //do not encode
-        } else if (x.id === "btn_item_container_main_games_7") {
-          //gd
-          url = "https://mathsspot.com/";
-          f.src = url; //do not encode
-        } else {
+        } else 
+        {
+        // if (x.id === "btn_item_container_main_games_7") {
+        //   //gd
+        //   url = "https://mathsspot.com/";
+        //   f.src = url; //do not encode
+        // } else {
           // alert("test")
           f.src = __uv$config.prefix + __uv$config.encodeUrl(url);
           console.log(__uv$config.decodeUrl(url));
