@@ -63,8 +63,11 @@ function select(x) {
         if (x.id === "btn_item_container_main_games_2") {
           //among
           url = atob(
-            "aHR0cHM6Ly9ub3cuZ2cvYXBwcy9pbm5lcnNsb3RoLWxsYy80MDQ3L2Ftb25nLXVzLmh0bWw="
+            "aHR0cHM6Ly9ub3cuZ2cvcGxheS9pbm5lcnNsb3RoLWxsYy80MDQ3L2Ftb25nLXVz"
+            // "aHR0cHM6Ly9ub3cuZ2cvYXBwcy9pbm5lcnNsb3RoLWxsYy80MDQ3L2Ftb25nLXVzLmh0bWw="
           );
+              s2_content =
+                "alert('if its not working try disabling your ad blocker')";
         }
         if (x.id === "btn_item_container_main_games_3") {
           //mc
@@ -82,7 +85,7 @@ function select(x) {
           //run3
           url = atob("aHR0cHM6Ly9wbGF5ZXIwMy5jb20vcnVuLzMvYmV0YS8=");
           s2_content =
-            "document.getElementById('f').style.display='flex'; alert('if its not working try disabling your ad blocker')";
+            "alert('if its not working try disabling your ad blocker')";
         }
         if (x.id === "btn_item_container_main_games_7") {
           //roblox
@@ -181,6 +184,8 @@ function select(x) {
         if (x.id === "btn_item_container_main_games_24") {
           //krunker.io
           url = atob("aHR0cHM6Ly9rcnVua2VyLmlvLw==");
+                    s2_content =
+                      "alert('This game may not work. It is very slow to load and takes up a lot of RAM.')";
         }
         if (x.id === "btn_item_container_main_games_25") {
           //geodash
@@ -189,13 +194,127 @@ function select(x) {
           );
         }
         if (x.id === "btn_item_container_main_games_26") {
-          //roblox
-          url = atob("");
+          //pubg
+          url = atob("aHR0cHM6Ly9ub3cuZ2cvcGxheS9wcm94aW1hLWJldGEvMjYwOS9wdWJnLW1vYmlsZS1yZXNpc3RhbmNl");
         }
         if (x.id === "btn_item_container_main_games_27") {
+          //basketbros
+          url = atob("aHR0cHM6Ly9iYXNrZXRicm9zLmlvLw==");
+        }
+        if (x.id === "btn_item_container_main_games_28") {
+          //basketballlegends
+          url = atob("aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J3MlBCQ3hnMG9yT0JKVnhGd2p3cEo1TnQzUjZvUGg0Yk5udWppQV9kWUtPTVhJYTdrL2V4ZWM=");
+        }
+        if (x.id === "btn_item_container_main_games_29") {
+          //tanukisunset
+          url = atob("aHR0cHM6Ly92NnA5ZDl0NC5zc2wuaHdjZG4ubmV0L2h0bWwvMTc1NjAwOS9XZWJHTC9pbmRleC5odG1s");
+        }
+        if (x.id === "btn_item_container_main_games_30") {
+          //driftboss
+          url = atob("aHR0cHM6Ly93d3cubWF0aHBsYXlncm91bmQuY29tL2RyaWZ0LWJvc3MtdjMvaW5kZXguaHRtbA==");
+        }
+        if (x.id === "btn_item_container_main_games_31") {
+          //vex4
+          url = atob("aHR0cHM6Ly90b28tYWR2YW5jZWQtZm9yLXNvY2lldHkuZ3EvdG1tLXZleDQv");
+        }
+        if (x.id === "btn_item_container_main_games_32") {
+          //vex5
+          url = atob("aHR0cHM6Ly9hZHZhbmNlZC1jaGFubmVsZXIuMDIuZ3otYXNzb2NpYXRlcy5jb20vP3Q9dGFtLXZleC01");
+        }
+        if (x.id === "btn_item_container_main_games_33") {
+          //vex6
+          url = atob(
+            // "aHR0cHM6Ly9odG1sNS5nYW1lZGlzdHJpYnV0aW9uLmNvbS80OTI1ZTEyNTc0MzY0MTIxYTQ4YzYxYzM1ZjY0OWMzNi8="
+            "aHR0cHM6Ly9odG1sNS5nYW1lZGlzdHJpYnV0aW9uLmNvbS9ydnZBU01pTS80OTI1ZTEyNTc0MzY0MTIxYTQ4YzYxYzM1ZjY0OWMzNi9pbmRleC5odG1sP2dkX3Nka19yZWZlcnJlcl91cmw9aHR0cHMlM0ElMkYlMkZ2ZXg1LmlvJTJGdmV4LTYmZ2Rfem9uZV9jb25maWc9ZXlKd1lYSmxiblJWVWt3aU9pSm9kSFJ3Y3pvdkwzWmxlRFV1YVc4dmRtVjRMVFlpTENKd1lYSmxiblJFYjIxaGFXNGlPaUoyWlhnMUxtbHZJaXdpZEc5d1JHOXRZV2x1SWpvaWRtVjROUzVwYnlJc0ltaGhjMGx0Y0hKbGMzTnBiMjRpT21aaGJITmxMQ0pzYjJGa1pYSkZibUZpYkdWa0lqcDBjblZsTENKb2IzTjBJam9pYUhSdGJEVXVaMkZ0WldScGMzUnlhV0oxZEdsdmJpNWpiMjBpTENKMlpYSnphVzl1SWpvaU1TNDFMakV6SW4wJTI1M0Q="
+          );
+        }
+        if (x.id === "btn_item_container_main_games_34") {
+          //fortnite
+          url = atob(
+            "aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9NDZiZmFiMDYtZDg2NC00NjVkLTllNTYtMmQ5ZTQ1Y2RlZTBhJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfNzdmY2Y5OTgtODVmNi00YmUwLWJhZTktNDNhODlhZDc1YWI3"
+          );
+        }
+        if (x.id === "btn_item_container_main_games_35") {
+          //rocketleague
+          url = atob(
+            "aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9OWJjYmY1YjQtYzQ2MC00MDkxLTkzMWMtYTVhMmExZmQ5Y2MyJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfYWFkYThjM2QtNjgyMy00MmU3LTkzMTAtODhlYzhkNDU1NmE5"
+          );
+        }
+        if (x.id === "btn_item_container_main_games_36") {
+          //apexlegends
+          url = atob(
+            "aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9Y2IyYjFiNWYtNTRiYS00NWZkLTk4MzktOTZiYmZlMTM3NmNkJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfMmNiMmE3OTEtNTI5ZC00ODNmLWE5MDUtYTc2OWFiN2YwMWNi"
+          );
+        }
+        if (x.id === "btn_item_container_main_games_37") {
+          //cyberpunk2077
+          url = atob(
+            "aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9ZTVmYzhhOTYtMmNkYS00OWVmLWJkMTMtNTEzYmRjNjgwNDViJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfMTcxNGI1NDktZTY0Yy00OGZlLWI3YjYtYWRjNDg1Zjc4ZTI2"
+          );
+          s2_content = "alert('Some of these GeForce Now games cost money. So you would need to hook them up to your already existing account')";
+        }
+        if (x.id === "btn_item_container_main_games_38") {
+          //starwarssquadrons
+          url = atob(
+            "aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9ZWIxOWRhMzItOGQ2ZS00ZjZkLWE3MzktZWQxN2NiNjhkZmIyJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfZjY4YmQ3YjAtNmFmYS00Yjg0LTg2M2YtYjBmZDUzYTkwYzNj"
+          );
+          s2_content = "alert('Some of these GeForce Now games cost money. So you would need to hook them up to your already existing account')";
+        }
+        if (x.id === "btn_item_container_main_games_39") {
+          //payday2
+          url = atob(
+            "aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9Y2YyM2U3N2YtMTRiNi00ZDJjLWEwMTItOGEwNmJhYmJhZDQyJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfNzY2NDcxMDAtMzI1My00M2M2LTkyOGEtZThiNDVmODNlY2Vh"
+          );
+          s2_content = "alert('Some of these GeForce Now games cost money. So you would need to hook them up to your already existing account')";
+        }
+        if (x.id === "btn_item_container_main_games_40") {
+          //Assassin'sCreedValhalla
+          url = atob(
+            "aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9NGFjNDc1NDYtNDAyMy00YWU3LTk4ZDEtNjBjOThjOWRiNzUyJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfMjYwNzNiZWYtMWJhOC00MzJmLWIyZjItOTJiNzdiYjExZDdh"
+          );
+          s2_content = "alert('Some of these GeForce Now games cost money. So you would need to hook them up to your already existing account')";
+        }
+        if (x.id === "btn_item_container_main_games_41") {
           //roblox
           url = atob("");
         }
+        if (x.id === "btn_item_container_main_games_42") {
+          //roblox
+          url = atob("");
+        }
+        if (x.id === "btn_item_container_main_games_43") {
+          //roblox
+          url = atob("");
+        }
+        if (x.id === "btn_item_container_main_games_44") {
+          //roblox
+          url = atob("");
+        }
+        if (x.id === "btn_item_container_main_games_45") {
+          //roblox
+          url = atob("");
+        }
+        if (x.id === "btn_item_container_main_games_46") {
+          //roblox
+          url = atob("");
+        }
+        if (x.id === "btn_item_container_main_games_47") {
+          //roblox
+          url = atob("");
+        }
+        if (x.id === "btn_item_container_main_games_48") {
+          //roblox
+          url = atob("");
+        }
+        if (x.id === "btn_item_container_main_games_49") {
+          //roblox
+          url = atob("");
+        }
+        if (x.id === "btn_item_container_main_games_50") {
+          //roblox
+          url = atob("");
+        }
+
 
         document.oncontextmenu = rightClick;
         function rightClick(e) {
@@ -210,7 +329,7 @@ function select(x) {
         var f = t.document.createElement("iframe");
         //  var l = t.document.createElement("h1");
         //  var s = t.document.createElement("script");
-        //  var s2 = t.document.createElement("script");
+         var s2 = t.document.createElement("script");
         //  var i = t.document.createElement("script");
         //  var i2 = t.document.createElement("link");
         var st = t.document.createElement("style");
@@ -237,8 +356,8 @@ function select(x) {
         lfss.src = "test_spinner.js";
 
         //  s.textContent = "document.oncontextmenu = rightClick;function rightClick(e) {e.preventDefault();}function no() {document.getElementById('f').style.display='flex';document.getElementById('l').style.display='none';}";
-        //  s2.textContent = s2_content;
-        //  console.log(s2_content);
+         s2.textContent = s2_content;
+         console.log(s2_content);
         //  i.src = "inject.js";
         //  i2.setAttribute("rel", "stylesheet");
         //  i2.href = "inject.css";
@@ -260,7 +379,7 @@ function select(x) {
         t.document.body.append(nb);
         t.document.body.append(f);
         //  t.document.body.append(s);
-        //  t.document.body.append(s2);
+         t.document.body.append(s2);
         t.document.body.append(st);
         t.document.body.append(lf);
         t.document.body.append(lfs);
@@ -295,6 +414,19 @@ function select(x) {
         }
         s2_content = ""; //resets s2_content
 
+
+
+
+
+
+
+
+
+
+
+
+
+
         // var f = t.document.createElement("iframe");
         // var l = t.document.createElement("h1");
         // var s = t.document.createElement("script");
@@ -305,8 +437,8 @@ function select(x) {
         // var st = t.document.createElement("style");
         // s.textContent =
         //   "document.oncontextmenu = rightClick;function rightClick(e) {e.preventDefault();}function no() {document.getElementById('f').style.display='flex';document.getElementById('l').style.display='none';}";
-        //   s2.textContent = s2_content;
-        //   console.log(s2_content);
+          // s2.textContent = s2_content;
+          // console.log(s2_content);
         //   i.src = "inject.js";
         //   i2.setAttribute('rel', 'stylesheet');
         //   i2.href = "inject.css";
