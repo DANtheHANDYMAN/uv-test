@@ -21,7 +21,8 @@ var db = firebase.database();
             function () {
               console.log("success");
               // window.location.replace("index.html");
-              window.location.replace("/");
+              // window.location.replace("/");
+              window.location.replace("/login.html"); //new changes 9/10/22
             },
             function () {}
           );
@@ -61,7 +62,8 @@ var db = firebase.database();
 
             console.log("redirect");
 
-            window.location.replace("/");
+            // window.location.replace("/");
+            window.location.replace("/login.html"); //new changes 9/10/22
           }
         });
       };
