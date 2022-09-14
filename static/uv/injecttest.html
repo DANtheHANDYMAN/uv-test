@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inject test</title>
+    <!-- <base target="_blank" />  -->
+    <!-- https://forum.squarespace.com/topic/21952-force-all-external-links-into-a-new-tab/ -->
+    <script></script>
+    
+</head>
+<body>
+    <a href="https://google.com/">hiii</a>
+    <a href="https://google.com/">hiieeeeeeeeeeeeei</a>
+    
+    
+    <!-- <script src="inject.js"></script> -->
+    <!-- <script>console.log('hi')</script> -->
+    <!-- <script>
+        var x = document.querySelectorAll("a");
+        for (let i = 0; i < x.length; i++) {
+            //   x[i].style.backgroundColor = "red";
+            //   var item = x[i];
+            //   x[i].onclick = `open(${x[i].href})`;
+            //   x[i].onclick = "open()";
+            
+            // x[i].setAttribute("onclick", `open(${x[i].href})`);
+            console.log(x[i].href);
+            // var new_url = x[i].href.replace(/^https?:\/\//, '');
+            // console.log(new_url)
+            // x[i].setAttribute("onclick", "open(" + new_url + ")");
+            
+            // x[i].setAttribute("onclick", "open(" + x[i].href + ")");
+            x[i].setAttribute("onclick", `open("${x[i].href}")`);
+            
+            
+            // x[i].removeAttribute("href");
+            x[i].href = "javascript:void(0)";
+            
+            
+            // x[i].addEventListener("click", function () {
+                // //   this.style.width = "500px";
+                // // this.
+                // });
+            }
+            
+            function open(url) {
+                console.log(url)
+            }
+        </script> -->
+        <style>
+            body, html {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                
+                font-size: 200%;
+        }
+        </style>
+<script src="inject2.js"></script>
+</body>
+</html>

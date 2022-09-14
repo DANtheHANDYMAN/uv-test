@@ -81,10 +81,38 @@ var db = firebase.database();
   };
 
 
-
+                            window.addEventListener('beforeunload', function (e) {
+                            //    function warning(e) { 
+                                    e.preventDefault();
+                                    e.returnValue = '';
+                                })
 
   
 console.log("after.js is working")
+
+function user() {
+    var url = window.location.origin + "/user.html";
+    var t = window.open("about:blank");
+    console.log(t)
+    t.document.write("<html><head> <title>Sample</title></head><body>");
+    var f = t.document.createElement("iframe");
+    var s = t.document.createElement("script");
+    var st = t.document.createElement("style");
+    s.textContent =
+      "document.oncontextmenu = rightClick;function rightClick(e) {e.preventDefault();}";
+    f.setAttribute("id", "f");
+    st.textContent =
+      "body,html{width:100%;height:100%;padding:0;margin:0; overflow:hidden;}iframe{width:100%;height:95vh;border:none;}";
+    t.document.write("</body></html>");
+    t.document.body.append(f);
+    t.document.body.append(s);
+    t.document.body.append(st);
+    f.src = url;
+  //   location = "https://google.com";
+}
+
+
+
 
 //  const response = fetch("/bare/v1")
 //    .then((response) => {

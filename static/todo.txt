@@ -26,10 +26,36 @@ start the music
 
 lifespan and will probably go supernova within a few million years.
 
-
-4. add fake progress loading bar!!!!
-5. add tab cloak at the bottom.
-6. make it so no right click on the game select
+thor
+jupiter
+titan 1
+titan 2
+hypergolic
+peacekeeper
+perigean
+apogee
+martyr
+mettle
+necromancy
+The revolution will not be televised.
+I'm feeling blue.
+Would you eat a "fish supper"?
+I've got no right to take my place…
+undertow
+covenant hereof croatian tribe burgesses mid cluster blazer 77 caricature
+schmaranormal
+dialog
+he stated that he wasn't going to dialogue with the guerrillas
+jive
+Irreversible and destructive actions. Tread lightly
+illustrious-heliotrope-6b98db
+https://movies.stackexchange.com/questions/113357/what-does-this-tattoo-mean-in-nobody
+https://www.corrections1.com/prison-gangs/articles/15-prison-tattoos-and-their-meanings-pzgKItC7WYoa1wvk/#:~:text=This%20tattoo%20is%20very%20popular,clubs%20symbolize%20criminals%20in%20general.
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Strings
+https://www.google.com/search?gs_ssp=eJzj4tVP1zc0TDeoqjBIMko3YPRiz8jPTy9PrAQAVt0Hcw&q=hoogway&oq=hoogwa&aqs=chrome.1.0i355i512j46i512j69i57j46i512l2j46i10i131i433j46i512j0i10i131i433j0i10i433j0i10i131i433.5848j0j7&sourceid=chrome&ie=UTF-8&safe=active&ssui=on#imgrc=UBqPdNL4z8rDXM%253A
+//4. add fake progress loading bar!!!!
+//5. add tab cloak at the bottom.
+//6. make it so no right click on the game select
 
 //7. add thing ping pong thing so it will detect if user is online
 //8. make user list thing
@@ -38,7 +64,7 @@ lifespan and will probably go supernova within a few million years.
 //10. make it so the icons wont move the whole thing with it
 
 //11. MAKE IT SO if your not signed in it will redirect and all that stuff !!!!!!!!!!!!!!!
-12. finish making the loading bar!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//12. finish making the loading bar!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 sites to add:
@@ -69,9 +95,14 @@ not blocked everyrthing works  might be slow deploying time though https://yrums
 github.io blocked
 gitlab.io not blocked
 
+player03 not blocked
+
+!!! client.incog.dev blocked :((((
 
 
-
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! i need to work on the div move geforce now games to new dif. fix geforce now login maybe when you click play on the game
+1111111111!!!!!!!!!!!!!!Eeeeeeeeeeee!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! add mario 64
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1 add fireboy and water girl and happy wheels
 
 {
   "hosting": {
@@ -112,6 +143,8 @@ Bill said he was secretly reveling in his new-found fame
 
 tik tok and twitter /bare/v1 problem might be hosting on codesandbox try on heroku and it works
 
+
+could add other apps and games that arent blocked {espn, portal, symbolmath symbolab}
 plan
 1. Get jm blocked
 2. Rule

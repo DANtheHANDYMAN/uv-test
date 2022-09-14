@@ -8797,6 +8797,25 @@ class Serializer {
                 this.html += attr.name;
             } else if (attr.namespace === NS.XLINK) {
                 this.html += 'xlink:' + attr.name;
+                // console.log(this.html);
+                // console.log(this.html.substring(this.html.indexOf("<head>") + 6));
+                // console.log('<!DOCTYPE html><html lang="en">' + this.html.substr(1, this.html.indexOf("<head>") - 1));
+                // var part1 =
+                // '<!DOCTYPE html><html lang="en">' + 
+                // this.html.substr(1, this.html.indexOf("<head>") - 1);
+
+                // var part1 = '<!DOCTYPE html><html lang="en">';
+                // var part2 = this.html.substring(this.html.indexOf("<head>") + 6);
+                // console.log(part1);
+                // console.log(part2);
+                // var content = '<base target="_blank" />';
+                
+                // this.html = part1 + content + part2;
+
+                //! finish this part!!!!!!
+
+                // text.substr(1, text.indexOf("<head>") - 1);
+
             } else {
                 this.html += attr.prefix + ':' + attr.name;
             }
@@ -35590,6 +35609,9 @@ function attributes(ctx, meta = ctx.meta) {
     html.on('attr', (attr, type) => {
         if (attr.node.tagName === 'base' && attr.name === 'href' && attr.options.document) {
             meta.base = new URL(attr.value, meta.url);
+            console.log(attr.name)
+            console.log(attr)
+
         };
         
         if (type === 'rewrite' && isUrl(attr.name, attr.tagName)) {
@@ -35762,79 +35784,106 @@ function injectHead(ctx) {
 function createInjection(handler = '/uv.handler.js', bundle = '/uv.bundle.js', config = '/uv.config.js', cookies = '', referrer = '') {
     
 return [
+  {
+    tagName: "script",
+    nodeName: "script",
+    childNodes: [
       {
-        tagName: "script",
-        nodeName: "script",
-        childNodes: [
-          {
-            nodeName: "#text",
-            value: `window.__uv$cookies = atob("${btoa(
-              cookies
-            )}");\nwindow.__uv$referrer = atob("${btoa(referrer)}");`,
-          },
-        ],
-        attrs: [
-          {
-            name: "__uv-script",
-            value: "1",
-            skip: true,
-          },
-        ],
+        nodeName: "#text",
+        value: `window.__uv$cookies = atob("${btoa(
+          cookies
+        )}");\nwindow.__uv$referrer = atob("${btoa(referrer)}");`,
+      },
+    ],
+    attrs: [
+      {
+        name: "__uv-script",
+        value: "1",
         skip: true,
       },
+    ],
+    skip: true,
+  },
+  {
+    tagName: "script",
+    nodeName: "script",
+    childNodes: [],
+    attrs: [
+      { name: "src", value: bundle, skip: true },
       {
-        tagName: "script",
-        nodeName: "script",
-        childNodes: [],
-        attrs: [
-          { name: "src", value: bundle, skip: true },
-          {
-            name: "__uv-script",
-            value: "1",
-            skip: true,
-          },
-        ],
+        name: "__uv-script",
+        value: "1",
+        skip: true,
       },
-    //   {
-    //     tagName: "script",
-    //     nodeName: "script",
-    //     childNodes: [],
-    //     attrs: [
-    //       { name: "src", value: "inject.js", skip: true },
-    //       {
-    //         name: "__uv-script",
-    //         value: "2",
-    //         skip: true,
-    //       },
-    //     ],
-    //   }, //TODO: work on scripts
+    ],
+  },
+
+  {
+    tagName: "script",
+    nodeName: "script",
+    childNodes: [],
+    attrs: [
+      { name: "src", value: "/uv/inject.js", skip: true },
       {
-        tagName: "script",
-        nodeName: "script",
-        childNodes: [],
-        attrs: [
-          { name: "src", value: config, skip: true },
-          {
-            name: "__uv-script",
-            value: "1",
-            skip: true,
-          },
-        ],
+        name: "__uv-script",
+        value: "2",
+        skip: true,
       },
+    ],
+  }, //TODO: work on scripts
+  {
+    tagName: "script",
+    nodeName: "script",
+    childNodes: [],
+    attrs: [
+      { name: "src", value: "/uv/removenvideatest.js", skip: true },
       {
-        tagName: "script",
-        nodeName: "script",
-        childNodes: [],
-        attrs: [
-          { name: "src", value: handler, skip: true },
-          {
-            name: "__uv-script",
-            value: "1",
-            skip: true,
-          },
-        ],
+        name: "__uv-script",
+        value: "2",
+        skip: true,
       },
-    ];
+    ],
+  }, //TODO: work on scripts 3333333333
+  {
+    tagName: "script",
+    nodeName: "script",
+    childNodes: [],
+    attrs: [
+      { name: "src", value: "/frametest.js", skip: true },
+      {
+        name: "__uv-script",
+        value: "2",
+        skip: true,
+      },
+    ],
+  }, //TODO: work on scripts 222222
+  {
+    tagName: "script",
+    nodeName: "script",
+    childNodes: [],
+    attrs: [
+      { name: "src", value: config, skip: true },
+      {
+        name: "__uv-script",
+        value: "1",
+        skip: true,
+      },
+    ],
+  },
+  {
+    tagName: "script",
+    nodeName: "script",
+    childNodes: [],
+    attrs: [
+      { name: "src", value: handler, skip: true },
+      {
+        name: "__uv-script",
+        value: "1",
+        skip: true,
+      },
+    ],
+  },
+];
 };
 
 function isForbidden(name) {
@@ -38441,16 +38490,26 @@ class LocationApi extends _events_js__WEBPACK_IMPORTED_MODULE_0__["default"] {
         const that = this;
 
         for (const key of that.keys) {
+            // console.log(that.keys);
+            // console.log(that);
+
             this.ctx.nativeMethods.defineProperty(emulation, key, {
                 get() {
-                    return parse(
-                        that.href.get.call(that.location)
+                            // console.log(that.href),
+                            // console.log(that)
+                            // console.log(that.href.get.call(that.location))
+                    return parse(that.href.get.call(that.location)
                     )[key];
                 },
                 set: key !== 'origin' ? function (val) {
                     switch(key) {
                         case 'href':
-                            that.location.href = wrap(val);
+                            // that.location.href = wrap(val);
+                            // console.log(that.location.href)
+                            // console.log(that)
+                            // console.log(wrap(val));
+                            //this is a test
+
                             break;
                         case 'hash':
                             that.emit('hashchange', emulation.href, (val.trim().startsWith('#') ? new URL(val.trim(), emulation.href).href : new URL('#' + val.trim(), emulation.href).href), that);
@@ -38459,6 +38518,9 @@ class LocationApi extends _events_js__WEBPACK_IMPORTED_MODULE_0__["default"] {
                             const url = new URL(emulation.href);
                             url[key] = val;
                             that.location.href = wrap(url.href);
+                                               console.log(that.location.href)
+                            console.log(that)
+                            console.log(wrap(val));
                     };
                 } : undefined,
                 configurable: false,
@@ -38484,6 +38546,11 @@ class LocationApi extends _events_js__WEBPACK_IMPORTED_MODULE_0__["default"] {
                     let [ input ] = args;
                     
                     const url = new URL(input, emulation.href);
+                    console.log(url)
+                    console.log(emulation.href)
+                    console.log(input)
+
+
                     return target.call(that === emulation ? this.location : that, wrap(url.href));
                 }),
                 writable: false,

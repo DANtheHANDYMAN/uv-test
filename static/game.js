@@ -228,67 +228,67 @@ function select(x) {
             "aHR0cHM6Ly9odG1sNS5nYW1lZGlzdHJpYnV0aW9uLmNvbS9ydnZBU01pTS80OTI1ZTEyNTc0MzY0MTIxYTQ4YzYxYzM1ZjY0OWMzNi9pbmRleC5odG1sP2dkX3Nka19yZWZlcnJlcl91cmw9aHR0cHMlM0ElMkYlMkZ2ZXg1LmlvJTJGdmV4LTYmZ2Rfem9uZV9jb25maWc9ZXlKd1lYSmxiblJWVWt3aU9pSm9kSFJ3Y3pvdkwzWmxlRFV1YVc4dmRtVjRMVFlpTENKd1lYSmxiblJFYjIxaGFXNGlPaUoyWlhnMUxtbHZJaXdpZEc5d1JHOXRZV2x1SWpvaWRtVjROUzVwYnlJc0ltaGhjMGx0Y0hKbGMzTnBiMjRpT21aaGJITmxMQ0pzYjJGa1pYSkZibUZpYkdWa0lqcDBjblZsTENKb2IzTjBJam9pYUhSdGJEVXVaMkZ0WldScGMzUnlhV0oxZEdsdmJpNWpiMjBpTENKMlpYSnphVzl1SWpvaU1TNDFMakV6SW4wJTI1M0Q="
           );
         }
-        if (x.id === "btn_item_container_main_games_34") {
+        if (x.id === "btn_item_container_nvidia_games_1") {
           //fortnite
           url = atob(
             "aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9NDZiZmFiMDYtZDg2NC00NjVkLTllNTYtMmQ5ZTQ1Y2RlZTBhJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfNzdmY2Y5OTgtODVmNi00YmUwLWJhZTktNDNhODlhZDc1YWI3"
           );
         }
-        if (x.id === "btn_item_container_main_games_35") {
+        if (x.id === "btn_item_container_nvidia_games_2") {
           //rocketleague
           url = atob(
             "aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9OWJjYmY1YjQtYzQ2MC00MDkxLTkzMWMtYTVhMmExZmQ5Y2MyJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfYWFkYThjM2QtNjgyMy00MmU3LTkzMTAtODhlYzhkNDU1NmE5"
           );
         }
-        if (x.id === "btn_item_container_main_games_36") {
+        if (x.id === "btn_item_container_nvidia_games_3") {
           //apexlegends
           url = atob(
             "aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9Y2IyYjFiNWYtNTRiYS00NWZkLTk4MzktOTZiYmZlMTM3NmNkJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfMmNiMmE3OTEtNTI5ZC00ODNmLWE5MDUtYTc2OWFiN2YwMWNi"
           );
         }
-        if (x.id === "btn_item_container_main_games_37") {
+        if (x.id === "btn_item_container_nvidia_games_4") {
           //cyberpunk2077
           url = atob(
             "aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9ZTVmYzhhOTYtMmNkYS00OWVmLWJkMTMtNTEzYmRjNjgwNDViJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfMTcxNGI1NDktZTY0Yy00OGZlLWI3YjYtYWRjNDg1Zjc4ZTI2"
           );
           s2_content = "alert('Some of these GeForce Now games cost money. So you would need to hook them up to your already existing account')";
         }
-        if (x.id === "btn_item_container_main_games_38") {
+        if (x.id === "btn_item_container_nvidia_games_5") {
           //starwarssquadrons
           url = atob(
             "aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9ZWIxOWRhMzItOGQ2ZS00ZjZkLWE3MzktZWQxN2NiNjhkZmIyJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfZjY4YmQ3YjAtNmFmYS00Yjg0LTg2M2YtYjBmZDUzYTkwYzNj"
           );
           s2_content = "alert('Some of these GeForce Now games cost money. So you would need to hook them up to your already existing account')";
         }
-        if (x.id === "btn_item_container_main_games_39") {
+        if (x.id === "btn_item_container_nvidia_games_6") {
           //payday2
           url = atob(
             "aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9Y2YyM2U3N2YtMTRiNi00ZDJjLWEwMTItOGEwNmJhYmJhZDQyJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfNzY2NDcxMDAtMzI1My00M2M2LTkyOGEtZThiNDVmODNlY2Vh"
           );
           s2_content = "alert('Some of these GeForce Now games cost money. So you would need to hook them up to your already existing account')";
         }
-        if (x.id === "btn_item_container_main_games_40") {
+        if (x.id === "btn_item_container_nvidia_games_7") {
           //Assassin'sCreedValhalla
           url = atob(
             "aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9NGFjNDc1NDYtNDAyMy00YWU3LTk4ZDEtNjBjOThjOWRiNzUyJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfMjYwNzNiZWYtMWJhOC00MzJmLWIyZjItOTJiNzdiYjExZDdh"
           );
           s2_content = "alert('Some of these GeForce Now games cost money. So you would need to hook them up to your already existing account')";
         }
-        if (x.id === "btn_item_container_main_games_41") {
+        if (x.id === "btn_item_container_nvidia_games_8") {
           //battlefield5
           url = atob(
             "aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9NjE5YjM0NjEtM2U3ZS00Yjg4LTkwODctYzA5ZTllMGI4YzJlJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfNWUyYzBmNDMtYjQ3NS00NjkyLWI2OGQtNzNhNDMzMTVhODNh"
           );
           s2_content = "alert('Some of these GeForce Now games cost money. So you would need to hook them up to your already existing account')";
         }
-        if (x.id === "btn_item_container_main_games_42") {
+        if (x.id === "btn_item_container_nvidia_games_9") {
           //superhot2
           url = atob(
             "aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9YmU1MGY5MjAtZGJjMy00MWZjLThjODMtYzk0OGI4Yjc3NmM2Jmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfZjJjYTY0NmMtMjMzOC00ZGYzLWJkYWEtMGExNzk2NmYyN2Mz"
           );
           s2_content = "alert('Some of these GeForce Now games cost money. So you would need to hook them up to your already existing account')";
         }
-        if (x.id === "btn_item_container_main_games_43") {
+        if (x.id === "btn_item_container_nvidia_games_10") {
           //warthunder
           //! add all the otehr war thunde tank games and totaly epic battle simulator game
           url = atob(
@@ -296,108 +296,111 @@ function select(x) {
           );
           s2_content = "alert('Some of these GeForce Now games cost money. So you would need to hook them up to your already existing account')";
         }
-        if (x.id === "btn_item_container_main_games_44") {
+        if (x.id === "btn_item_container_nvidia_games_11") {
           //wows
           url = atob(
             "aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9NDMxMzVhMzgtNmQ3My00NTZmLWI0ZTAtNjNjZGY0OGQ5ZjM0Jmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfYTg1NjAzYmEtOWZmNy00NmE5LThlMWEtZTUwMDVmZWE3NTEx"
           );
           s2_content = "alert('Some of these GeForce Now games cost money. So you would need to hook them up to your already existing account')";
         }
-        if (x.id === "btn_item_container_main_games_45") {
+        if (x.id === "btn_item_container_nvidia_games_12") {
           //wowp
           url = atob(
             "aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9MjUxNDU5NGUtZTUxYi00ZGE3LWFjMzEtYzhlMDIyYTE2MThjJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfYWE5N2RiNTgtNGY1NC00NTdmLTgwMDUtNTRlOGYyZjEwYTk5"
           );
           s2_content = "alert('Some of these GeForce Now games cost money. So you would need to hook them up to your already existing account')";
         }
-        if (x.id === "btn_item_container_main_games_46") {
+        if (x.id === "btn_item_container_nvidia_games_13") {
           //wot
           url = atob(
             "aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9OGMwYzA5ZWUtY2JmMC00YjJjLTk4NzMtMzQyYTJjYjc2ZTQ4Jmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfZThmZWY3OTItMjdiNC00YTc4LTkyNzUtYWUwYzFjZGY4NGI0"
           );
           s2_content = "alert('Some of these GeForce Now games cost money. So you would need to hook them up to your already existing account')";
         }
-        if (x.id === "btn_item_container_main_games_47") {
+        if (x.id === "btn_item_container_nvidia_games_14") {
           //tabs
           url = atob(
             "aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9ZmJjYWYzZGQtYWJlZi00ZWQyLTg1NTAtMGZkZGQxYTAxZjdjJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfMTliZGI5YTQtOTEwZS00N2VlLTk4YTctNjRlMGMxNDA4YmI3"
           );
           s2_content = "alert('Some of these GeForce Now games cost money. So you would need to hook them up to your already existing account')";
         }
-        if (x.id === "btn_item_container_main_games_48") {
+        if (x.id === "btn_item_container_nvidia_games_15") {
           //tcr6
           url = atob(
             "aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9MWRkMDdkNDctNjYwMS00MmY3LTgwZTktZTRkOGRiMDhlYTFiJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfYjllMzQxNDAtNGE0ZC00MTA5LTk5MDEtYmQ2MDAxNDE2YTVi"
           );
           s2_content = "alert('Some of these GeForce Now games cost money. So you would need to hook them up to your already existing account')";
         }
-        if (x.id === "btn_item_container_main_games_49") {
+        if (x.id === "btn_item_container_nvidia_games_16") {
           //csgo
           url = atob(
             "aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9ZGNmZjljMDMtNTk3MS00OTkyLWFiN2QtMGY2NTVlZjBiZmUyJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfYjZjYjdlNDQtZDFkNC00MzY4LWIxNTctZDlmZmUxNWE0YTBj"
           );
           s2_content = "alert('Some of these GeForce Now games cost money. So you would need to hook them up to your already existing account')";
         }
-        if (x.id === "btn_item_container_main_games_50") {
+        if (x.id === "btn_item_container_nvidia_games_17") {
           //terraria
           url = atob("aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9MDllYWIwNzUtOTVlOS00NTcyLTk4YWUtMDRmOTRiYzhhNThlJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfNGU4NTJkMzItY2JmMy00MTA5LTk0NDYtMTgxN2JjYTM4ZjQz");
           s2_content = "alert('Some of these GeForce Now games cost money. So you would need to hook them up to your already existing account')";
         }
-        if (x.id === "btn_item_container_main_games_51") {
+        if (x.id === "btn_item_container_nvidia_games_18") {
           //helloneighbor
           url = atob("aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9YjI0MDM0MmUtZjhkNi00ZmZhLWJkYTctODY1NjNjZWQyN2UyJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfZDMzNGIwNDgtNDRhZi00NjZhLTk3MTktZWIwYTk4YWRmYTQw");
           s2_content = "alert('Some of these GeForce Now games cost money. So you would need to hook them up to your already existing account')";
         }
-        if (x.id === "btn_item_container_main_games_52") {
+        if (x.id === "btn_item_container_nvidia_games_19") {
           //farcry6
           url = atob("aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9ZjkwMzE4YzAtMzI0Mi00OThiLTgyNTktMGY3MjA1YTFhNTAxJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfZTBlMmM0MTMtYjY3MC00OGQwLTg1M2ItZGVhMzUzMzMxNWU3");
           s2_content = "alert('Some of these GeForce Now games cost money. So you would need to hook them up to your already existing account')";
         }
-        if (x.id === "btn_item_container_main_games_53") {
+        if (x.id === "btn_item_container_nvidia_games_20") {
           //fs15
           url = atob("aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9YjA4NWNjYTQtOGIwNy00Yjc2LTg0MzAtNTIwOGM5MDkzOWFiJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfMzc3MzcwZWYtZTliNi00N2FlLThkMTMtMTYzZGIzNTY5OThj");
           s2_content = "alert('Some of these GeForce Now games cost money. So you would need to hook them up to your already existing account')";
         }
-        if (x.id === "btn_item_container_main_games_54") {
+        if (x.id === "btn_item_container_nvidia_games_21") {
           //tft
           url = atob("aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9NDA1MTI1MzQtYWQyNy00YTEyLWFmYTctNmZjNDEyMjg4MDcyJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfNTQ3YjIwNjQtMTNhZC00YmE1LWI5MjgtZDI3NzBhY2NkZGYx");
           s2_content = "alert('Some of these GeForce Now games cost money. So you would need to hook them up to your already existing account')";
         }
-        if (x.id === "btn_item_container_main_games_55") {
+        if (x.id === "btn_item_container_nvidia_games_22") {
           //lol
           url = atob("aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9YjBkZTVkZmYtY2YzNi00ZDk3LTk2ODgtOTY0YTE5MmJjNDAwJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfMDRjZWI3MGEtOGQ2Yi00OWYyLTk5NzktZDFhNmMxOTE0M2Yw");
           s2_content = "alert('Some of these GeForce Now games cost money. So you would need to hook them up to your already existing account')";
         }
-        if (x.id === "btn_item_container_main_games_56") {
+        if (x.id === "btn_item_container_nvidia_games_23") {
           //genshinimpact
           url = atob("aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9NjRjYzllOTItNmFkNi00OWI5LWEzMzUtOGE1NzliYTdiNDM0Jmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfMzNjYjNhOWItMjY5Yi00ODc2LTg1ZmEtODY3YmY0ZDQzYWM2");
           s2_content = "alert('Some of these GeForce Now games cost money. So you would need to hook them up to your already existing account')";
         }
-        if (x.id === "btn_item_container_main_games_57") {
+        if (x.id === "btn_item_container_nvidia_games_24") {
           //cuphead
-          url = atob("aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9NDRhNDU1ZTYtYjYwZS00MDE2LWI2MmEtZDBjMTMwNTJjOGMyJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfYzcyOGFhNTQtNTg5MS00ZmU1LWE4MGQtNTM0NjAyOGQ2Y2Zm");
+          url = atob(
+            // "aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9NDRhNDU1ZTYtYjYwZS00MDE2LWI2MmEtZDBjMTMwNTJjOGMyJmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfYzcyOGFhNTQtNTg5MS00ZmU1LWE4MGQtNTM0NjAyOGQ2Y2Zm"
+            "aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL21hbGwvIy9kZWVwbGluaz9nYW1lLWlkPTQ0YTQ1NWU2LWI2MGUtNDAxNi1iNjJhLWQwYzEzMDUyYzhjMg=="
+            );
           s2_content = "alert('Some of these GeForce Now games cost money. So you would need to hook them up to your already existing account')";
         }
-        if (x.id === "btn_item_container_main_games_58") {
+        if (x.id === "btn_item_container_nvidia_games_25") {
           //geforcenowsignup
           url = atob(
             // "aHR0cHM6Ly93d3cubnZpZGlhLmNvbS9lbi11cy9nZWZvcmNlLW5vdy8jcHJvZHVjdC1tYXRyaXgtcm9vdA=="
             "aHR0cHM6Ly93d3cubnZpZGlhLmNvbS9lbi11cy9jaGVja291dC9jYXJ0P3Byb2R1Y3RzPTEwMDAsMTAwMSZ2PTQ="
           );
         }
-        if (x.id === "btn_item_container_main_games_59") {
+        if (x.id === "btn_item_container_nvidia_games_26") {
           //geforcenowlogin
           url = atob(
             "aHR0cHM6Ly93d3cubnZpZGlhLmNvbS9lbi11cy9hY2NvdW50L2VkaXQtcHJvZmlsZS8="
           );
         }
-        if (x.id === "btn_item_container_main_games_60") {
+        if (x.id === "btn_item_container_nvidia_games_27") {
           //rust
           url = atob("aHR0cHM6Ly9wbGF5LmdlZm9yY2Vub3cuY29tL2dhbWVzP2dhbWUtaWQ9ZWYzNGEwNTctOGZmMS00MTI5LTllOWItMzg3ZTY3Y2VjZGE1Jmxhbmc9ZW5fVVMmYXNzZXQtaWQ9MDFfNjJmZjViOGYtNTZjNS00NjQ0LWI5ZjQtNDNiODNmYTM3NmQw");
         }
-        if (x.id === "btn_item_container_main_games_61") {
-          //roblox
-          url = atob("");
+        if (x.id === "btn_item_container_nvidia_games_28") {
+          //scrapmetal
+          url = atob("aHR0cHM6Ly93d3cuZ2FtZWFydGVyLmNvbS9nYW1lL3NjcmFwLW1ldGFsLw==");
         }
         if (x.id === "btn_item_container_main_games_62") {
           //roblox
@@ -508,7 +511,12 @@ function select(x) {
           //gdb
           url = "https://google.com/logos/2019/july4th19/r3/july4th19.html";
           f.src = url; //do not encode
-        } else 
+        } else if (x.id === "btn_item_container_main_games_test") {
+          url = "https://www.nvidia.com/en-us/geforce-now/";
+          //f.src = url; //do not encode
+          f.src = __uv$config.prefix + __uv$config.encodeUrl(url);
+
+        } else
         {
         // if (x.id === "btn_item_container_main_games_7") {
         //   //gd
