@@ -15,6 +15,15 @@
   "keywords": [
     "proxy"
   ],
-  "author": "",
-  "license": "GPL-3.0-or-later"
+  "author": "me",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DANtheHANDYMAN/uv-test3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DANtheHANDYMAN/uv-test3/issues"
+  },
+  "homepage": "https://github.com/DANtheHANDYMAN/uv-test3#readme"
 }
